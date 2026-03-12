@@ -1,0 +1,162 @@
+#!/usr/bin/env bash
+
+# ----------------------
+# Utility: 检查命令是否存在
+# ----------------------
+has_cmd() {
+  for cmd in "$@"; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+      return 1
+    fi
+  done
+  return 0
+}
+
+# ----------------------
+# 文件信息
+# ----------------------
+file="$1"
+filename=$(basename "$file")
+ext="${filename##*.}"
+mime=$(file -Lbs --mime-type "$file")
+category=${mime%%/*}
+kind=${mime##*/}
+
+# ----------------------
+# 大文件安全检查 (10MB)
+# ----------------------
+maxSize=$((10 * 1024 * 1024))
+if [ -f "$file" ] && [ "$(stat -c%s "$file")" -gt $maxSize ]; then
+  echo "[File too large to preview: $filename]"
+  exit 0
+fi
+
+# ----------------------
+# octet-stream 特殊文件
+# ----------------------
+if [ "$kind" = "octet-stream" ]; then
+  # TensorBoard tfevents
+  if [[ "$filename" == *events.out.tfevents.* ]]; then
+    python <<EOF
+from contextlib import suppress
+import sys
+from time import gmtime, strftime
+import pandas as pd
+import plotext as plt
+from tensorboard.backend.event_processing.event_file_loader import EventFileLoader
+
+df = pd.DataFrame(columns=["Step","Value"])
+df.index.name = "YYYY-mm-dd HH:MM:SS"
+
+for event in EventFileLoader("$file").Load():
+    with suppress(IndexError):
+        df.loc[strftime("%F %H:%M:%S", gmtime(event.wall_time))] = [
+            event.step,
+            event.summary.value[0].tensor.float_val[0]
+        ]
+df.index = pd.to_datetime(df.index)
+df.Step = df.Step.astype(int)
+plt.plot(df.Step, df.Value, marker="braille")
+plt.title(event.summary.value[0].metadata.display_name)
+plt.clc()
+plt.show()
+df.to_csv(sys.stdout, "\t")
+EOF
+  # LMDB
+  elif [[ "$filename" == "data.mdb" ]]; then
+    python <<EOF
+from os.path import dirname
+import lmdb
+
+with lmdb.open(dirname("$file")) as env, env.begin() as txn:
+    for key, val in txn.cursor():
+        print(key.decode())
+EOF
+  fi
+
+# ----------------------
+# PyTorch pth 文件
+# ----------------------
+elif [ "$kind" = "zip" ] && [ "$ext" = "pth" ]; then
+  python <<EOF
+import torch
+data = torch.load("$file")
+if isinstance(data, torch.Tensor):
+    print("Tensor shape:", data.shape)
+print(data)
+EOF
+
+# ----------------------
+# JSON / Notebook
+# ----------------------
+elif [ "$kind" = "application" ] && [ "$ext" = "ipynb" ]; then
+  if has_cmd jupyter bat; then
+    jupyter nbconvert --to python --stdout "$file" | bat --color=always -plpython
+  elif has_cmd jq; then
+    jq -Cr . "$file"
+  fi
+
+# SQLite
+elif [ "$kind" = "vnd.sqlite3" ]; then
+  if has_cmd sqlite3 bat; then
+    sqlite3 "$file" ".tables" | bat --color=always -plsql
+  fi
+
+# ----------------------
+# 目录显示
+# ----------------------
+elif [ -d "$file" ]; then
+  if has_cmd eza; then
+    eza -hl --git --color=always --icons "$file"
+  elif has_cmd exa; then
+    exa -hl --color=always --icons "$file"
+  fi
+
+# ----------------------
+# PDF
+# ----------------------
+elif [ "$kind" = "pdf" ]; then
+  if has_cmd pdftotext sed; then
+    pdftotext -q "$file" - | sed "s/\f/$(printf '─%.0s' {1..80})\n/g"
+  fi
+
+# ----------------------
+# 邮件 / JS
+# ----------------------
+elif [ "$kind" = "rfc822" ]; then
+  if has_cmd bat; then
+    bat --color=always -lEmail "$file"
+  fi
+elif [ "$kind" = "javascript" ]; then
+  if has_cmd bat; then
+    bat --color=always -ljs "$file"
+  fi
+
+# ----------------------
+# 图片
+# ----------------------
+elif [ "$category" = "image" ]; then
+  if has_cmd chafa; then
+    chafa -f symbols "$file"
+  fi
+  if has_cmd exiftool bat; then
+    exiftool "$file" | bat --color=always -plyaml
+  fi
+
+# ----------------------
+# 文本文件
+# ----------------------
+elif [ "$category" = "text" ]; then
+  if has_cmd bat; then
+    bat --color=always "$file"
+  elif has_cmd pygmentize; then
+    pygmentize "$file" | less -R
+  fi
+
+# ----------------------
+# 未知文件类型
+# ----------------------
+else
+  echo "[No preview available for $filename]"
+  exit 1
+fi

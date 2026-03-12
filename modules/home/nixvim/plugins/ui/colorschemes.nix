@@ -1,0 +1,18 @@
+{ config, pkgs, ... }:
+{
+  colorschemes = {
+    catppuccin = {
+      enable = true;
+      flavour = "mocha";
+      integrations = {
+        bufferline = true;
+        treesitter = true;
+        cmp = true;
+        gitsigns = true;
+        rainbow_delimiters = true;
+        indent_blankline = true;
+        notify = true;
+      };
+    };
+  };
+}

@@ -20,6 +20,7 @@
   # ==================================================
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # ==================================================
   # 网络
@@ -37,7 +38,7 @@
       nmcli dev wifi connect "H3C_A96AFE_5G" password "80808080"
     '';
   };
-  
+
   # ==================================================
   # 蓝牙 + 音频
   # ==================================================

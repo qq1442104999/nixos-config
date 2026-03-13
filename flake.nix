@@ -70,7 +70,6 @@
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
-              inputs.disko.nixosModules.disko
               ./hosts/laptop/configuration.nix
               inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
               {

@@ -1,14 +1,30 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, modulesPath, inputs, ... }:
 
 {
   # ==================================================
   # 导入模块
   # ==================================================
   imports = [
-    #./hardware-configuration.nix
-    ../../modules/nixos/disko/disk-config.nix
+    (modulesPath + "/installer/scan/not-detected.nix")
+
+    inputs.disko.nixosModules.disko
+    ../../modules/disko/disk-config.nix
   ];
 
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "ahci"
+    "usb_storage"
+    "sd_mod"
+    "rtsx_pci_sdmmc"
+  ];
+
+  boot.kernelModules = [ "kvm-intel" ];
+
+  nixpkgs.hostPlatform = "x86_64-linux";
+
+  hardware.cpu.intel.updateMicrocode = true;
+  
   # ==================================================
   # 系统基本信息
   # ==================================================
@@ -20,7 +36,6 @@
   # ==================================================
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
 
   # ==================================================
   # 网络

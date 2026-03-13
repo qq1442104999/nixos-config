@@ -34,12 +34,10 @@
   # 设置开机自动启动 NetworkManager
   systemd.services."NetworkManager".enable = true;
 
-  networking.networkmanager.wifi = {
-    networks = {
-      "H3C_A96AFE_5G" = {
-        password = "80808080";
-        priority = 1;  # 优先级高的优先连接
-      };
+  networking.wireless.networks = {
+    "H3C_A96AFE_5G" = {
+      psk = "80808080";  # Wi-Fi 密码
+      priority = 1;
     };
   };
 

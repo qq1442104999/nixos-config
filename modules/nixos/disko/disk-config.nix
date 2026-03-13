@@ -11,7 +11,7 @@
 
           # EFI 分区
           ESP = {
-            size = "512M";
+            size = "1G";
             type = "EF00";
 
             content = {

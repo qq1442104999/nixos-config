@@ -96,6 +96,7 @@
   users.users.wang = {
     isNormalUser = true;        # 普通用户
     description  = "wang";
+    password = "wanglei";
 
     extraGroups = [
       "wheel"           # sudo 权限

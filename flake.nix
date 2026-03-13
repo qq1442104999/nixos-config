@@ -15,6 +15,8 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
+    disko.url = "github:nix-community/disko";
+
     # nixvim
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -46,6 +48,7 @@
       systems = [ "x86_64-linux" ];
       flake = {
         nixosConfigurations = {
+          
           wang = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
@@ -62,6 +65,25 @@
               }
             ];
           };
+
+          laptop = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = { inherit inputs; };
+            modules = [
+              inputs.disko.nixosModules.disko
+              ./hosts/laptop/configuration.nix
+              inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  extraSpecialArgs = { inherit inputs; };
+                  users.wang = import ./home/laptop/home.nix;
+                };
+              }
+            ];
+          };
+
         };
       };
     };

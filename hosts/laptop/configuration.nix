@@ -26,6 +26,20 @@
   networking.networkmanager.enable = true;   # 使用 NetworkManager 管理网络
   networking.interfaces.ens18.useDHCP = true; # 网卡 DHCP
 
+  # 可选：默认启用 Wi-Fi
+  services.dbus.enable = true;
+  networking.wireless.enable = true;
+
+  # 设置开机自动启动 NetworkManager
+  systemd.services."NetworkManager".enable = true;
+
+  networking.networkmanager.wifi = {
+    "H3C_A96AFE_5G" = {
+      password = "80808080";
+      priority = 1;  # 优先级高的优先连接
+    };
+  };
+
   # ==================================================
   # 蓝牙 + 音频
   # ==================================================

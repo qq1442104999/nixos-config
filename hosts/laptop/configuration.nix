@@ -8,7 +8,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
 
     inputs.disko.nixosModules.disko
-    ../../modules/disko/disk-config.nix
+    ../../modules/nixos/disko/disk-config.nix
   ];
 
   boot.initrd.availableKernelModules = [
@@ -24,7 +24,7 @@
   nixpkgs.hostPlatform = "x86_64-linux";
 
   hardware.cpu.intel.updateMicrocode = true;
-  
+
   # ==================================================
   # 系统基本信息
   # ==================================================

@@ -5,7 +5,8 @@
   # 导入模块
   # ==================================================
   imports = [
-    ./hardware-configuration.nix
+    #./hardware-configuration.nix
+    ../../modules/nixos/disko/disk-config.nix
   ];
 
   # ==================================================

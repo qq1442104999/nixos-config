@@ -17,7 +17,7 @@
             content = {
               type = "filesystem";
               format = "vfat";
-              mountpoint = "/boot";
+              mountpoint = "/boot/efi";
             };
           };
 
@@ -34,7 +34,6 @@
           # root 分区
           root = {
             size = "100%"; # 剩余全部空间
-
             content = {
               type = "filesystem";
               format = "ext4";

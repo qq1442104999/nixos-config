@@ -23,7 +23,7 @@
 
           # swap 分区
           swap = {
-            size = "16G"; # 可以根据内存大小调整
+            size = "8G"; # 可以根据内存大小调整
             type = "8200"; # Linux swap 类型
 
             content = {

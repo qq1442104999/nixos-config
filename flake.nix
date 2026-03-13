@@ -15,6 +15,8 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
+    disko.url = "github:nix-community/disko";
+
     # nixvim
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -68,6 +70,7 @@
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
+              inputs.disko.nixosModules.disko
               ./hosts/laptop/configuration.nix
               inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
               {

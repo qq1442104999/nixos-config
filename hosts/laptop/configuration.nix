@@ -40,11 +40,6 @@
   # 网络
   # ==================================================
   networking.networkmanager.enable = true;   # 使用 NetworkManager 管理网络
-  #networking.interfaces.ens18.useDHCP = true; # 网卡 DHCP
-
-  #services.dbus.enable = true;
-
-  #systemd.services."NetworkManager".enable = true;
 
   networking.networkmanager.ensureProfiles.profiles = {
     "H3C_A96AFE_5G" = {

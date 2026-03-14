@@ -5,25 +5,25 @@
   # 导入模块
   # ==================================================
   imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
+    #(modulesPath + "/installer/scan/not-detected.nix")
 
     inputs.disko.nixosModules.disko
     ../../modules/nixos/disko/disk-config.nix
   ];
 
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "ahci"
-    "usb_storage"
-    "sd_mod"
-    "rtsx_pci_sdmmc"
-  ];
-
-  boot.kernelModules = [ "kvm-intel" ];
-
-  nixpkgs.hostPlatform = "x86_64-linux";
-
-  hardware.cpu.intel.updateMicrocode = true;
+  #boot.initrd.availableKernelModules = [
+  #  "xhci_pci"
+  #  "ahci"
+  #  "usb_storage"
+  #  "sd_mod"
+  #  "rtsx_pci_sdmmc"
+  #];
+#
+  #boot.kernelModules = [ "kvm-intel" ];
+#
+  #nixpkgs.hostPlatform = "x86_64-linux";
+#
+  #hardware.cpu.intel.updateMicrocode = true;
 
   # ==================================================
   # 系统基本信息

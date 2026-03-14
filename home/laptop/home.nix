@@ -5,6 +5,15 @@
   # 导入 Home Manager 模块
   # ==================================================
   imports = [
+    inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
+    {
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        extraSpecialArgs = { inherit inputs; };
+        users.wang = import ./home.nix;
+      };
+    }
 
     # Niri 桌面配置
     ../../modules/home/niri/default.nix

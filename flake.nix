@@ -69,18 +69,7 @@
           laptop = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
-            modules = [
-              ./hosts/laptop/configuration.nix
-              inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
-              {
-                home-manager = {
-                  useGlobalPkgs = true;
-                  useUserPackages = true;
-                  extraSpecialArgs = { inherit inputs; };
-                  users.wang = import ./home/laptop/home.nix;
-                };
-              }
-            ];
+            modules = [ ./hosts/laptop/configuration.nix ];
           };
 
         };

@@ -24,7 +24,7 @@
   # 网络
   # ==================================================
   networking.networkmanager.enable = true;   # 使用 NetworkManager 管理网络
-  networking.interfaces.ens18.useDHCP = true; # 网卡 DHCP
+  #networking.interfaces.ens18.useDHCP = true; # 网卡 DHCP
 
   # ==================================================
   # 蓝牙 + 音频

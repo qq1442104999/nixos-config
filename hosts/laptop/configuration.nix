@@ -6,6 +6,7 @@
   # ==================================================
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+
     inputs.disko.nixosModules.disko
     ./disk-config.nix
 
@@ -18,6 +19,8 @@
         users.wang = import ../../home/laptop/home.nix;
       };
     }
+
+    ../../modules/nixos/system/fonts.nix
   ];
 
   boot.initrd.availableKernelModules = [
@@ -120,22 +123,6 @@
   services.xserver.xkb = {
     layout  = "us";    # 键盘布局
     variant = "";
-  };
-
-  # ==================================================
-  # 字体配置
-  # ==================================================
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono  # JetBrainsMono Nerd Font
-    source-han-sans            # 思源黑体
-  ];
-
-  fonts.fontconfig.enable = true;
-
-  fonts.fontconfig.defaultFonts = {
-    monospace = [ "JetBrainsMono Nerd Font" "Source Han Sans" ];
-    sansSerif = [ "Source Han Sans" ];
-    serif     = [ "Source Han Sans" ];
   };
 
   # ==================================================

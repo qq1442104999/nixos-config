@@ -15,7 +15,10 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    disko.url = "github:nix-community/disko";
+    disko = {
+      url = "github:divnix/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # nixvim
     nixvim = {

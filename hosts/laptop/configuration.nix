@@ -8,6 +8,16 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     inputs.disko.nixosModules.disko
     ./disk-config.nix
+
+    inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
+    {
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        extraSpecialArgs = { inherit inputs; };
+        users.wang = import ../../home/laptop/home.nix;
+      };
+    }
   ];
 
   boot.initrd.availableKernelModules = [

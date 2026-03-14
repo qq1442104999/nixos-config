@@ -20,14 +20,14 @@
 
   boot.kernelModules = [ 
     "kvm-intel" 
-    "iwlwifi"
+   #"iwlwifi"
     ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
 
   hardware.cpu.intel.updateMicrocode = true;
 
-  hardware.firmware = [ pkgs.linux-firmware.iwlwifi ];
+  #hardware.firmware = [ pkgs.linux-firmware ];
 
   # ==================================================
   # 系统基本信息

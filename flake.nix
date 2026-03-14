@@ -15,8 +15,8 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    disko = {
-      url = "github:divnix/disko";
+    disko =  {
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

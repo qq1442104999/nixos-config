@@ -1,15 +1,14 @@
 {
   disko.devices = {
     disk.main = {
-      device = "/dev/sda";
       type = "disk";
+      device = "/dev/sda";
 
       content = {
         type = "gpt";
 
         partitions = {
 
-          # EFI 分区
           ESP = {
             size = "1G";
             type = "EF00";
@@ -18,22 +17,23 @@
               type = "filesystem";
               format = "vfat";
               mountpoint = "/boot";
+              mountOptions = [ "umask=0077" ];
             };
           };
 
-          # swap 分区
           swap = {
-            size = "8G"; # 可以根据内存大小调整
-            type = "8200"; # Linux swap 类型
+            size = "8G";
+            type = "8200";
 
             content = {
               type = "swap";
+              resumeDevice = true;
             };
           };
 
-          # root 分区
           root = {
-            size = "100%"; # 剩余全部空间
+            size = "100%";
+
             content = {
               type = "filesystem";
               format = "ext4";

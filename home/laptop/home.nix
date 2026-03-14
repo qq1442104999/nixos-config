@@ -52,5 +52,6 @@
     ripgrep
     tree
     fastfetch
+    pciutils
   ];
 }

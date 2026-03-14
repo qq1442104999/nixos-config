@@ -27,7 +27,7 @@
 
   hardware.cpu.intel.updateMicrocode = true;
 
-  hardware.firmware = [ pkgs.linuxFirmware.iwlwifi ];
+  hardware.firmware = [ pkgs.linux-Firmware.iwlwifi ];
 
   # ==================================================
   # 系统基本信息

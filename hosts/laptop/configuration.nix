@@ -8,7 +8,7 @@
     #(modulesPath + "/installer/scan/not-detected.nix")
 
     inputs.disko.nixosModules.disko
-    ../../modules/nixos/disko/disk-config.nix
+    ./disk-config.nix
   ];
 
   #boot.initrd.availableKernelModules = [

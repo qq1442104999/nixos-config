@@ -18,16 +18,11 @@
     "rtsx_pci_sdmmc"
   ];
 
-  boot.kernelModules = [ 
-    "kvm-intel" 
-   #"iwlwifi"
-    ];
+  boot.kernelModules = [ "kvm-intel" ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
 
   hardware.cpu.intel.updateMicrocode = true;
-
-  #hardware.firmware = [ pkgs.linux-firmware ];
 
   # ==================================================
   # 系统基本信息

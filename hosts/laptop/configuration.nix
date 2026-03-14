@@ -40,17 +40,33 @@
   # 网络
   # ==================================================
   networking.networkmanager.enable = true;   # 使用 NetworkManager 管理网络
-  networking.interfaces.ens18.useDHCP = true; # 网卡 DHCP
+  #networking.interfaces.ens18.useDHCP = true; # 网卡 DHCP
 
-  services.dbus.enable = true;
+  #services.dbus.enable = true;
 
-  systemd.services."NetworkManager".enable = true;
+  #systemd.services."NetworkManager".enable = true;
 
-  systemd.services.nm-auto-connect = {
-    enable = true;
-    script = ''
-      nmcli dev wifi connect "H3C_A96AFE_5G" password "80808080"
-    '';
+  networking.networkmanager.ensureProfiles.profiles = {
+    "H3C_A96AFE_5G" = {
+      connection = {
+        id = "H3C_A96AFE_5G";
+        type = "wifi";
+        autoconnect = true;
+        interface-name = "wlp0s20f3";
+      };
+      wifi = {
+        mode = "infrastructure";
+        ssid = "H3C_A96AFE_5G";
+      };
+      wifi-security = {
+        auth-alg = "open";
+        key-mgmt = "wpa-psk";
+        psk = "80808080"; # 你的密码
+      };
+      ipv4 = {
+        method = "auto";
+      };
+    };
   };
 
   # ==================================================

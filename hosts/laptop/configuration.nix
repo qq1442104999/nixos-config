@@ -22,6 +22,8 @@
     ../../modules/nixos/system/fonts.nix
     ../../modules/nixos/system/users.nix
     ../../modules/nixos/system/audio.nix
+    ../../modules/nixos/system/network.nix
+    ../../modules/nixos/system/boot.nix
 
     ../../modules/nixos/desktop/niri.nix
   ];
@@ -33,16 +35,8 @@
   time.timeZone = "Asia/Shanghai";    # 时区
 
   # ==================================================
-  # 系统启动（Bootloader）
-  # ==================================================
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # ==================================================
   # 网络
   # ==================================================
-  networking.networkmanager.enable = true;   # 使用 NetworkManager 管理网络
-
   networking.networkmanager.ensureProfiles.profiles = {
     "H3C_A96AFE_5G" = {
       connection = {
@@ -103,14 +97,6 @@
 
   # 允许运行未打包的二进制程序（如 AppImage / 手动下载软件）
   programs.nix-ld.enable = true;
-
-
-  # ==================================================
-  # 系统服务
-  # ==================================================
-  services.openssh.enable = true;  # SSH 远程登录
-
-  services.openssh.settings.PasswordAuthentication = true;
 
   # ==================================================
   # 系统软件

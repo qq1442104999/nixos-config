@@ -1,14 +1,13 @@
-{ config, lib, pkgs, modulesPath, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   # ==================================================
   # 导入模块
   # ==================================================
   imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-
     inputs.disko.nixosModules.disko
     ./disk-config.nix
+    ./hardware.nix
 
     inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
     {
@@ -23,20 +22,6 @@
     ../../modules/nixos/system/fonts.nix
     ../../modules/nixos/system/users.nix
   ];
-
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "ahci"
-    "usb_storage"
-    "sd_mod"
-    "rtsx_pci_sdmmc"
-  ];
-
-  boot.kernelModules = [ "kvm-intel" ];
-
-  nixpkgs.hostPlatform = "x86_64-linux";
-
-  hardware.cpu.intel.updateMicrocode = true;
 
   # ==================================================
   # 系统基本信息

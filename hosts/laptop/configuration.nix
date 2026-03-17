@@ -1,9 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  # ==================================================
-  # 导入模块
-  # ==================================================
   imports = [
     inputs.disko.nixosModules.disko
     ./disk-config.nix

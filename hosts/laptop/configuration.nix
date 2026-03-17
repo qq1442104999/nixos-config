@@ -21,6 +21,7 @@
 
     ../../modules/nixos/system/fonts.nix
     ../../modules/nixos/system/users.nix
+    ../../modules/nixos/desktop/niri.nix
   ];
 
   # ==================================================
@@ -119,32 +120,6 @@
   # 允许运行未打包的二进制程序（如 AppImage / 手动下载软件）
   programs.nix-ld.enable = true;
 
-  # ==================================================
-  # Wayland 桌面（Niri）
-  # ==================================================
-  programs.niri.enable = true;
-
-  # ==================================================
-  # 登录管理器（可选）
-  # ==================================================
-  services.greetd = {
-    enable = true;
-    settings.default_session = {
-      command = "niri";
-      user = "wang";
-    };
-  };
-
-  # ==================================================
-  # XDG Portal（Wayland应用支持）
-  # ==================================================
-  xdg.portal = {
-    enable = true;
-
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-    ];
-  };
 
   # ==================================================
   # 系统服务
@@ -172,11 +147,6 @@
 
     # nix 开发工具
     nix-prefetch-scripts
-
-    # Wayland
-    niri
-    xdg-desktop-portal-gtk
-    xwayland-satellite
   ];
 
   # ==================================================

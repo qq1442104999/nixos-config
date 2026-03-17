@@ -21,6 +21,8 @@
 
     ../../modules/nixos/system/fonts.nix
     ../../modules/nixos/system/users.nix
+    ../../modules/nixos/system/audio.nix
+
     ../../modules/nixos/desktop/niri.nix
   ];
 
@@ -63,24 +65,6 @@
       };
     };
   };
-
-  # ==================================================
-  # 蓝牙 + 音频
-  # ==================================================
-  hardware.bluetooth.enable = true;          # 启用蓝牙
-
-  services.pipewire = {
-    enable = true;
-
-    alsa.enable = true;
-    alsa.support32Bit = true;
-
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
-  # 蓝牙音频支持
-  services.blueman.enable = true;
 
   # ==================================================
   # 电源管理
@@ -143,7 +127,6 @@
 
     # 剪贴板
     xclip
-    wl-clipboard
 
     # nix 开发工具
     nix-prefetch-scripts

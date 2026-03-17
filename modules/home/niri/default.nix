@@ -37,7 +37,7 @@
 
   xdg.configFile."niri/config.kdl".source =
     config.lib.file.mkOutOfStoreSymlink 
-      "${toString niri/config.kdl}";
+      "${toString ./config.kdl}";
 
   home.packages = with pkgs; [
     kitty

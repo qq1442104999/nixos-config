@@ -8,7 +8,7 @@
   programs.niri = {
     enable = true;
 
-    #settings = {
+    settings = {
 #
     #  prefer-no-csd = true;
 #
@@ -32,7 +32,7 @@
     #      command = [ "mako" ];
     #    }
     #  ];
-    #};
+    };
   };
 
   xdg.configFile."niri/config.kdl".source =

@@ -34,6 +34,10 @@ let
 
 in
 {
+  imports = [
+    ./starship.nix
+  ];
+
   # ======================
   # 基础工具
   # ======================
@@ -41,7 +45,7 @@ in
 
   programs.zoxide.enable = true;
 
-  programs.starship.enable = true;
+
 
   # ======================
   # Zsh / Oh-My-Zsh

@@ -44,7 +44,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    imports = [ modules/home/omzsh/flake_inputs.nix];
+    imports = [ ./modules/home/omzsh/flake_inputs.nix ];
   };
 
   # 2️⃣ 输出

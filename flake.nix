@@ -43,6 +43,8 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    imports = [ modules/home/omzsh/flake_inputs.nix];
   };
 
   # 2️⃣ 输出

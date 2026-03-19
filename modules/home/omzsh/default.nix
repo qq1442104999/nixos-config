@@ -87,7 +87,7 @@ in
       # ======================
       # 基础环境变量
       # ======================
-      mkdir -p "$ZSH_CACHE_DIR"
+      #mkdir -p "$ZSH_CACHE_DIR"
       #export ZSH="${pkgs.oh-my-zsh}/share/oh-my-zsh"
       export CONFIGDIR="''${XDG_CONFIG_HOME:-$HOME/.config}"
       export LESS='-R'

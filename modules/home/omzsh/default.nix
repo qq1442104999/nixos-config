@@ -32,6 +32,9 @@ let
     hash = "sha256-VMne38IQwqB4jwGUI2f3eEiSkT2ww7+G5ch7w+65GT0=";
   };
 
+  ZSH_PLUGINS_DIR = "${config.home.homeDirectory}/nixos/modules/home/omzsh/plugins"; # 你本地插件目录
+  ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh"; # 缓存目录
+
 in
 {
   imports = [
@@ -53,24 +56,39 @@ in
   programs.zsh = {
     enable = true;
 
-    oh-my-zsh = {
-      enable = true;
-      theme = "robbyrussell"; # 主题由 OMZ 管理（Starship 会覆盖 prompt）
-      plugins = [
-        "git"
-        "sudo"
-        "extract"
-        "command-not-found"
-        "colored-man-pages"
-        "fzf"
-      ];
+    history = {
+      path = "${ZSH_CACHE_DIR}/zsh_history";
+      size = 50000;
+      save = 10000;
     };
+
+    shellAliases = {
+      ls = "ls --color=auto";
+      ll = "ls -lh";
+      la = "ls -Iah";
+      vim = "nvim";
+      vi = "nvim";
+    };
+
+    #oh-my-zsh = {
+    #  enable = true;
+    #  theme = "robbyrussell"; # 主题由 OMZ 管理（Starship 会覆盖 prompt）
+    #  plugins = [
+    #    "git"
+    #    "sudo"
+    #    "extract"
+    #    "command-not-found"
+    #    "colored-man-pages"
+    #    "fzf"
+    #  ];
+    #};
 
     initContent = lib.mkOrder 500 ''
       # ======================
       # 基础环境变量
       # ======================
-      export ZSH="${pkgs.oh-my-zsh}/share/oh-my-zsh"
+      mkdir -p "$ZSH_CACHE_DIR"
+      #export ZSH="${pkgs.oh-my-zsh}/share/oh-my-zsh"
       export CONFIGDIR="''${XDG_CONFIG_HOME:-$HOME/.config}"
       export LESS='-R'
 
@@ -84,6 +102,9 @@ in
       source ${fzfTabSource}/fzf-tab-source.plugin.zsh
       source ${zshAutosuggestions}/zsh-autosuggestions.plugin.zsh
       source ${zshSyntaxHighlighting}/zsh-syntax-highlighting.zsh
+      source "${ZSH_PLUGINS_DIR}/colored-man-pages/colored-man-pages.plugin.zsh"
+      source "${ZSH_PLUGINS_DIR}/extract/extract.plugin.zsh"
+      source "${ZSH_PLUGINS_DIR}/sudo/sudo.plugin.zsh"
 
       # ======================
       # FZF 配置
@@ -110,12 +131,21 @@ in
       #eval "$(zoxide init zsh)"
       #eval "$(starship init zsh)"
 
-      # ======================
-      # Alias
-      # ======================
-      alias ip='ip -c'
-      alias vim='nvim'
-      alias vi='nvim'
+      # --------------------------
+      # 自动跳回上次目录
+      # --------------------------
+      _apply_chpwd_hook() {
+          chpwd_hook() { echo $PWD > "${ZSH_CACHE_DIR}/currentdir" }
+          autoload -Uz add-zsh-hook
+          add-zsh-hook -Uz chpwd chpwd_hook
+          if [[ -f "${ZSH_CACHE_DIR}/currentdir" ]]; then
+              local currentdir
+              currentdir=$(cat "${ZSH_CACHE_DIR}/currentdir")
+              [[ -d "$currentdir" ]] && cd "$currentdir"
+          fi
+      }
+      _apply_chpwd_hook
+
     '';
   };
 

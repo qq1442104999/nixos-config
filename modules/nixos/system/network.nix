@@ -11,7 +11,7 @@
     };
   };
 
-  users.users.wang.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGFqRG9H1jn9pzl6IitwGDNcVDxe+oXql6yuezTFyv35 administrator@USER-20211220FH" # 这里粘贴你的公钥字符串
-  ];
+  #users.users.wang.openssh.authorizedKeys.keys = [
+  #  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGFqRG9H1jn9pzl6IitwGDNcVDxe+oXql6yuezTFyv35 administrator@USER-20211220FH" # 这里粘贴你的公钥字符串
+  #];
 }

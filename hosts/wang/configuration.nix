@@ -120,7 +120,7 @@
   # 系统层面的 Zsh 配置
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    #enableCompletion = true;
   };
 
   # 关键：链接补全文件

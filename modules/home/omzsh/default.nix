@@ -69,12 +69,12 @@ in
       {
         name = "extract";
         src = "${ZSH_PLUGINS_DIR}/extract";
-        file = "extract.plugin.zsh"
+        file = "extract.plugin.zsh";
       }
       {
         name = "sudo";
         src = "${ZSH_PLUGINS_DIR}/sudo";
-        file = "sudo.plugin.zsh"
+        file = "sudo.plugin.zsh";
       }
     ];
 
@@ -102,17 +102,6 @@ in
 
       setopt GLOB_DOTS
       zstyle ':completion:*' menu no
-
-      # ======================
-      # Zsh 插件（顺序很重要）
-      # ======================
-      #source ${fzfTab}/fzf-tab.plugin.zsh
-      #source ${fzfTabSource}/fzf-tab-source.plugin.zsh
-      #source ${zshAutosuggestions}/zsh-autosuggestions.plugin.zsh
-      #source ${zshSyntaxHighlighting}/zsh-syntax-highlighting.zsh
-      #source "${ZSH_PLUGINS_DIR}/colored-man-pages/colored-man-pages.plugin.zsh"
-      #source "${ZSH_PLUGINS_DIR}/extract/extract.plugin.zsh"
-      #source "${ZSH_PLUGINS_DIR}/sudo/sudo.plugin.zsh"
 
       # ======================
       # FZF 配置

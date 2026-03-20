@@ -10,16 +10,18 @@ let
 in
 {
   imports = [
-    ./starship.nix
-    ./eza.nix
+    ./programs/starship.nix
+    ./programs/eza.nix
+    ./programs/fzf.nix
+    ./programs/zoxide.nix
   ];
 
   # ======================
   # 基础工具
   # ======================
-  programs.fzf.enable = true;
+  #programs.fzf.enable = true;
 
-  programs.zoxide.enable = true;
+  #programs.zoxide.enable = true;
 
 
 
@@ -38,11 +40,6 @@ in
     };
 
     shellAliases = {
-      #ls = "ls --color=auto";
-      #ll = "ls -lh";
-      #la = "ls -Iah";
-      #vim = "nvim";
-      #vi = "nvim";
       grep = "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}";
     };
 
@@ -85,7 +82,6 @@ in
       # ======================
       # 基础环境变量
       # ======================
-      export CONFIGDIR="''${XDG_CONFIG_HOME:-$HOME/.config}"
       export LESS='-R'
 
       setopt GLOB_DOTS
@@ -173,25 +169,21 @@ in
       # ======================
       # FZF 配置
       # ======================
-      export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
-      export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-      export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+      #export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
+      #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+      #export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
 
-      export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
-      export FZF_DEFAULT_OPTS="
-        --height=40%
-        --layout=reverse
-        --border
-        --info=inline
-        --preview-window=right:60%
-      "
+      #export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
+      #export FZF_DEFAULT_OPTS="
+      #  --height=40%
+      #  --layout=reverse
+      #  --border
+      #  --info=inline
+      #  --preview-window=right:60%
+      #"
 
       zstyle ':fzf-tab:*' fzf-command fzf
       export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
-
-      # ======================
-      # 工具初始化
-      # ======================
 
       # --------------------------
       # 自动跳回上次目录

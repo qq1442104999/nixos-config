@@ -127,7 +127,7 @@ in
         zle -N zle-line-finish
       fi
       bindkey -e                                            # Use emacs key bindings
-      bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+      #bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
       if [[ "''${terminfo[kpp]}" != "" ]]; then
         bindkey "''${terminfo[kpp]}" up-line-or-history       # [PageUp] - Up a line of history
       fi
@@ -177,7 +177,7 @@ in
       export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
       export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
 
-      export FZF_CTRL_T_OPTS="--preview '$CONFIGDIR/fzf/preview.sh {}'"
+      export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
       export FZF_DEFAULT_OPTS="
         --height=40%
         --layout=reverse
@@ -187,13 +187,11 @@ in
       "
 
       zstyle ':fzf-tab:*' fzf-command fzf
-      export FZF_TAB_CUSTOM_PREVIEW="$CONFIGDIR/fzf/preview.sh {}"
+      export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
 
       # ======================
       # 工具初始化
       # ======================
-      #eval "$(zoxide init zsh)"
-      #eval "$(starship init zsh)"
 
       # --------------------------
       # 自动跳回上次目录

@@ -8,7 +8,7 @@
     defaultCommand = "fd --type f --hidden --follow --exclude .git";
 
     # 对应 export FZF_DEFAULT_OPTS
-    defaultOpts = ''
+    defaultOptions = ''
       --height=40%
       --layout=reverse
       --border

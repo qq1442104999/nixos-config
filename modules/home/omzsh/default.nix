@@ -63,17 +63,17 @@ in
       }
       {
         name = "colored-man-pages";
-        src = ${ZSH_PLUGINS_DIR}/colored-man-pages;
+        src = "${ZSH_PLUGINS_DIR}/colored-man-pages";
         file = "colored-man-pages.plugin.zsh";
       }
       {
         name = "extract";
-        src = ${ZSH_PLUGINS_DIR}/extract;
+        src = "${ZSH_PLUGINS_DIR}/extract";
         file = "extract.plugin.zsh"
       }
       {
         name = "sudo";
-        src = ${ZSH_PLUGINS_DIR}/sudo;
+        src = "${ZSH_PLUGINS_DIR}/sudo";
         file = "sudo.plugin.zsh"
       }
     ];

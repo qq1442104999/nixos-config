@@ -5,7 +5,6 @@ let
     inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools;
   };
 
-  ZSH_PLUGINS_DIR = "${config.home.homeDirectory}/nixos/modules/home/omzsh/plugins"; # 你本地插件目录
   ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh"; # 缓存目录
 
 in
@@ -63,17 +62,17 @@ in
       }
       {
         name = "colored-man-pages";
-        src = "${ZSH_PLUGINS_DIR}/colored-man-pages";
+        src = ./plugins/colored-man-pages;
         file = "colored-man-pages.plugin.zsh";
       }
       {
         name = "extract";
-        src = "${ZSH_PLUGINS_DIR}/extract";
+        src = ./plugins/extract;
         file = "extract.plugin.zsh";
       }
       {
         name = "sudo";
-        src = "${ZSH_PLUGINS_DIR}/sudo";
+        src = ./plugins/sudo;
         file = "sudo.plugin.zsh";
       }
     ];

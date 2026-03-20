@@ -29,7 +29,7 @@
 
     # 开启 TMUX 集成
     tmux = {
-      enable = true;
+      enableShellIntegration = true;
       # 这里就是 shellIntegrationOptions
       # -p 代表 popup (弹出窗口)
       # 80%,60% 代表宽度和高度

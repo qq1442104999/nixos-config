@@ -211,8 +211,6 @@ in
     fd
     fzf
     lesspipe
-    starship
-    zoxide
 
     python3Packages.pandas
     python3Packages.plotext

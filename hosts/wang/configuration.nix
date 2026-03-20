@@ -175,6 +175,7 @@
 
     # nix 开发工具
     nix-prefetch-scripts
+    nvfetcher
 
     # Wayland
     niri

@@ -1,0 +1,15 @@
+[fzf-tab]
+src.github = "Aloxaf/fzf-tab"
+fetch.github = "Aloxaf/fzf-tab"
+
+[fzf-tab-source]
+src.github = "Freed-Wu/fzf-tab-source"
+fetch.github = "Freed-Wu/fzf-tab-source"
+
+[zsh-autosuggestions]
+src.github = "zsh-users/zsh-autosuggestions"
+fetch.github = "zsh-users/zsh-autosuggestions"
+
+[zsh-syntax-highlighting]
+src.github = "zsh-users/zsh-syntax-highlighting"
+fetch.github = "zsh-users/zsh-syntax-highlighting"

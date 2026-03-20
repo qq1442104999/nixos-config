@@ -2,7 +2,7 @@
 {
   programs.fzf = {
     enable = true;
-    enableZshIntegration = false; # 是否启用 Oh-My-Zsh 插件，如果启用则不需要单独安装 fzf-tab 插件
+    enableZshIntegration = true; # 是否启用 Oh-My-Zsh 插件，如果启用则不需要单独安装 fzf-tab 插件
     
     # 对应 export FZF_DEFAULT_COMMAND
     defaultCommand = "fd --type f --hidden --follow --exclude .git";

@@ -117,7 +117,14 @@
   # ==================================================
   # Shell 环境
   # ==================================================
-  programs.zsh.enable = true;   # 启用 Zsh
+  # 系统层面的 Zsh 配置
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+  };
+
+  # 关键：链接补全文件
+  environment.pathsToLink = [ "/share/zsh" ];
 
   # 允许运行未打包的二进制程序（如 AppImage / 手动下载软件）
   programs.nix-ld.enable = true;

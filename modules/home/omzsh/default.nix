@@ -77,19 +77,6 @@ in
       }
     ];
 
-    #oh-my-zsh = {
-    #  enable = true;
-    #  theme = "robbyrussell"; # 主题由 OMZ 管理（Starship 会覆盖 prompt）
-    #  plugins = [
-    #    "git"
-    #    "sudo"
-    #    "extract"
-    #    "command-not-found"
-    #    "colored-man-pages"
-    #    "fzf"
-    #  ];
-    #};
-
     initContent = lib.mkOrder 500 ''
       # ======================
       # 基础环境变量

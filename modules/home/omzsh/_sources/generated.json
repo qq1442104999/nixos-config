@@ -1,0 +1,86 @@
+{
+    "fzf-tab": {
+        "cargoLock": null,
+        "date": "2026-03-17",
+        "extract": null,
+        "name": "fzf-tab",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Aloxaf",
+            "repo": "fzf-tab",
+            "rev": "0983009f8666f11e91a2ee1f88cfdb748d14f656",
+            "sha256": "sha256-yvPQyuK4Dw+LkwxrkWTRcw4PIf/79fW61jWbEg8Pe9Y=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0983009f8666f11e91a2ee1f88cfdb748d14f656"
+    },
+    "fzf-tab-source": {
+        "cargoLock": null,
+        "date": "2026-01-14",
+        "extract": null,
+        "name": "fzf-tab-source",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Freed-Wu",
+            "repo": "fzf-tab-source",
+            "rev": "5463698036f5e23ef275b4b55c42551879ebfab4",
+            "sha256": "sha256-ar025RTlDFWEnE9Ql8WBz4tiBmz1B2tsZiRI2/mVCDI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "5463698036f5e23ef275b4b55c42551879ebfab4"
+    },
+    "zsh-autosuggestions": {
+        "cargoLock": null,
+        "date": "2025-06-24",
+        "extract": null,
+        "name": "zsh-autosuggestions",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zsh-users",
+            "repo": "zsh-autosuggestions",
+            "rev": "85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5",
+            "sha256": "sha256-KmkXgK1J6iAyb1FtF/gOa0adUnh1pgFsgQOUnNngBaE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5"
+    },
+    "zsh-syntax-highlighting": {
+        "cargoLock": null,
+        "date": "2026-02-08",
+        "extract": null,
+        "name": "zsh-syntax-highlighting",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zsh-users",
+            "repo": "zsh-syntax-highlighting",
+            "rev": "1d85c692615a25fe2293bdd44b34c217d5d2bf04",
+            "sha256": "sha256-VMne38IQwqB4jwGUI2f3eEiSkT2ww7+G5ch7w+65GT0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1d85c692615a25fe2293bdd44b34c217d5d2bf04"
+    }
+}

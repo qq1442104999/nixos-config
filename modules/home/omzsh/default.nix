@@ -31,7 +31,7 @@ in
   programs.zsh = {
     enable = true;
 
-    enableCompletion = true;
+    #enableCompletion = true;
 
     history = {
       path = "${ZSH_CACHE_DIR}/zsh_history";

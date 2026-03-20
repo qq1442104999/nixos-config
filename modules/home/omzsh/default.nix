@@ -1,35 +1,8 @@
 { config, pkgs, lib, ... }:
 
 let
-  # ======================
-  # 第三方 Zsh 插件
-  # ======================
-  fzfTab = pkgs.fetchFromGitHub {
-    owner = "Aloxaf";
-    repo = "fzf-tab";
-    rev = "747c15de85a38748b28c29ac65616137dbb4c8b6";
-    hash = "sha256-gatFp2kjyqaqi8hu0UWPDtQAy+X2VmyYNPP4aiNDdHg=";
-  };
-
-  fzfTabSource = pkgs.fetchFromGitHub {
-    owner = "Freed-Wu";
-    repo = "fzf-tab-source";
-    rev = "5463698036f5e23ef275b4b55c42551879ebfab4";
-    hash = "sha256-ar025RTlDFWEnE9Ql8WBz4tiBmz1B2tsZiRI2/mVCDI=";
-  };
-
-  zshAutosuggestions = pkgs.fetchFromGitHub {
-    owner = "zsh-users";
-    repo = "zsh-autosuggestions";
-    rev = "85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5";
-    hash = "sha256-KmkXgK1J6iAyb1FtF/gOa0adUnh1pgFsgQOUnNngBaE=";
-  };
-
-  zshSyntaxHighlighting = pkgs.fetchFromGitHub {
-    owner = "zsh-users";
-    repo = "zsh-syntax-highlighting";
-    rev = "1d85c692615a25fe2293bdd44b34c217d5d2bf04";
-    hash = "sha256-VMne38IQwqB4jwGUI2f3eEiSkT2ww7+G5ch7w+65GT0=";
+  sources = import ./_sources/generated.nix {
+    inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools;
   };
 
   ZSH_PLUGINS_DIR = "${config.home.homeDirectory}/nixos/modules/home/omzsh/plugins"; # 你本地插件目录
@@ -70,6 +43,41 @@ in
       vi = "nvim";
     };
 
+    plugins = [
+      {
+        name = "fzf-tab";
+        src = sources.fzf-tab.src;
+        file = "fzf-tab.plugin.zsh";
+      }
+
+      {
+        name = "zsh-autosuggestions";
+        src = sources.zsh-autosuggestions.src;
+        file = "zsh-autosuggestions.zsh";
+      }
+
+      {
+        name = "zsh-syntax-highlighting";
+        src = sources.zsh-syntax-highlighting.src;
+        file = "zsh-syntax-highlighting.zsh";
+      }
+      {
+        name = "colored-man-pages";
+        src = ${ZSH_PLUGINS_DIR}/colored-man-pages;
+        file = "colored-man-pages.plugin.zsh";
+      }
+      {
+        name = "extract";
+        src = ${ZSH_PLUGINS_DIR}/extract;
+        file = "extract.plugin.zsh"
+      }
+      {
+        name = "sudo";
+        src = ${ZSH_PLUGINS_DIR}/sudo;
+        file = "sudo.plugin.zsh"
+      }
+    ];
+
     #oh-my-zsh = {
     #  enable = true;
     #  theme = "robbyrussell"; # 主题由 OMZ 管理（Starship 会覆盖 prompt）
@@ -98,13 +106,13 @@ in
       # ======================
       # Zsh 插件（顺序很重要）
       # ======================
-      source ${fzfTab}/fzf-tab.plugin.zsh
-      source ${fzfTabSource}/fzf-tab-source.plugin.zsh
-      source ${zshAutosuggestions}/zsh-autosuggestions.plugin.zsh
-      source ${zshSyntaxHighlighting}/zsh-syntax-highlighting.zsh
-      source "${ZSH_PLUGINS_DIR}/colored-man-pages/colored-man-pages.plugin.zsh"
-      source "${ZSH_PLUGINS_DIR}/extract/extract.plugin.zsh"
-      source "${ZSH_PLUGINS_DIR}/sudo/sudo.plugin.zsh"
+      #source ${fzfTab}/fzf-tab.plugin.zsh
+      #source ${fzfTabSource}/fzf-tab-source.plugin.zsh
+      #source ${zshAutosuggestions}/zsh-autosuggestions.plugin.zsh
+      #source ${zshSyntaxHighlighting}/zsh-syntax-highlighting.zsh
+      #source "${ZSH_PLUGINS_DIR}/colored-man-pages/colored-man-pages.plugin.zsh"
+      #source "${ZSH_PLUGINS_DIR}/extract/extract.plugin.zsh"
+      #source "${ZSH_PLUGINS_DIR}/sudo/sudo.plugin.zsh"
 
       # ======================
       # FZF 配置

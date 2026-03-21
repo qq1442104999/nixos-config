@@ -232,7 +232,6 @@ in
   home.packages = with pkgs; [
     file
     fd
-    fzf
     lesspipe
 
     python3Packages.pandas

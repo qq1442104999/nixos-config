@@ -191,19 +191,20 @@ in
         }
       _apply_keybindings
 
-      # ========= FZF-Tab 自定义预览 =========
-      #export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
-      #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-      #export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+      # ========= FZF自定义预览 =========
+      export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+      export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
 
-      #export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
-      #export FZF_DEFAULT_OPTS="
-      #  --height=40%
-      #  --layout=reverse
-      #  --border
-      #  --info=inline
-      #  --preview-window=right:60%
-      #"
+      export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+
+      export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
+      export FZF_DEFAULT_OPTS="
+        --height=40%
+        --layout=reverse
+        --border
+        --info=inline
+        --preview-window=right:60%
+      "
 
       zstyle ':fzf-tab:*' fzf-command fzf
       #zstyle ':fzf-tab:*' preview 'bash -c $FZF_TAB_CUSTOM_PREVIEW'

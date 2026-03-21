@@ -151,7 +151,7 @@ in
       # ========= 快捷键绑定 =========
       _apply_keybindings() {
         bindkey -e                                            # Use emacs key bindings
-        bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+        #bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
         if [[ "''${terminfo[kpp]}" != "" ]]; then
           bindkey "''${terminfo[kpp]}" up-line-or-history       # [PageUp] - Up a line of history
         fi
@@ -203,11 +203,11 @@ in
         --layout=reverse
         --border
         --info=inline
-        --preview-window=right:60%
+        --preview-window=right:60%:wrap
       "
 
       zstyle ':fzf-tab:*' fzf-command fzf
-      #zstyle ':fzf-tab:*' preview 'bash -c $FZF_TAB_CUSTOM_PREVIEW'
+      zstyle ':fzf-tab:*' preview 'bash -c $FZF_TAB_CUSTOM_PREVIEW'
       export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
 
       # --------------------------

@@ -18,15 +18,6 @@ in
   ];
 
   # ======================
-  # 基础工具
-  # ======================
-  #programs.fzf.enable = true;
-
-  #programs.zoxide.enable = true;
-
-
-
-  # ======================
   # Zsh / Oh-My-Zsh
   # ======================
   programs.zsh = {

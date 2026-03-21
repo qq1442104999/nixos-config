@@ -13,8 +13,20 @@
       "--layout=reverse"
       "--border"
       "--preview-window=right:60%:wrap"
-      "--color=fg:default,bg:default,spinner:yellow,header:cyan,info:yellow,pointer:red,marker:green"
     ];
+
+    # 设置颜色
+    colors = {
+      fg      = "default";    # 普通文字
+      bg      = "default";    # 背景
+      header  = "cyan";       # 顶部 header
+      info    = "yellow";     # 信息文字
+      prompt  = "green";      # 提示符
+      pointer = "red";        # 当前选中行指针
+      marker  = "magenta";    # 多选标记
+      spinner = "yellow";     # spinner
+      fg+, bg+ = "default";   # 高亮文字/背景
+    };
 
     # 对应 export FZF_CTRL_T_COMMAND 和 FZF_CTRL_T_OPTS
     fileWidgetCommand = "fd --hidden --follow --exclude .git";

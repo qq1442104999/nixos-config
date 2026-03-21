@@ -52,6 +52,7 @@
     signcolumn = "yes";   # 防止行号跳动
 
     cursorline = true;    # 高亮当前行
+    guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20";  # 不同模式下的光标形状
 
     # ---------- 折叠系统 ----------
     foldcolumn = "0";     # 不显示折叠列

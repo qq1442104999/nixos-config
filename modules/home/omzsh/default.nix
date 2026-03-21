@@ -214,6 +214,7 @@ in
       #"
 
       zstyle ':fzf-tab:*' fzf-command fzf
+      #zstyle ':fzf-tab:*' preview 'bash -c $FZF_TAB_CUSTOM_PREVIEW'
       export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
 
       # --------------------------

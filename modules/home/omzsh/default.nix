@@ -15,6 +15,7 @@ in
     ./programs/eza.nix
     ./programs/fzf.nix
     ./programs/zoxide.nix
+    ./programs/yazi.nix
   ];
 
   # ======================

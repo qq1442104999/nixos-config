@@ -85,7 +85,23 @@ in
       }
     ];
 
-    setOptions = [ ];
+    setOptions = [
+      "GLOB_DOTS"
+      "AUTO_PUSHD"
+      "PUSHD_IGNORE_DUPS"
+      "PUSHDMINUS"
+      "EXTENDED_HISTORY"
+      "HIST_EXPIRE_DUPS_FIRST"
+      "HIST_IGNORE_DUPS"
+      "HIST_IGNORE_SPACE"
+      "HIST_VERIFY"
+      "INC_APPEND_HISTORY"
+      "SHARE_HISTORY"
+      "AUTO_CD"
+      "MULTIOS"
+      "PROMPT_SUBST"
+      "NO_CORRECT"
+    ];
 
     # ----------------------
     # initExtra 拆块
@@ -99,24 +115,24 @@ in
       zmodload -i zsh/complist
       autoload -U colors && colors
 
-      unsetopt correct
-      setopt GLOB_DOTS
+      #unsetopt correct
+      #setopt GLOB_DOTS
 
-      setopt auto_pushd
-      setopt pushd_ignore_dups
-      setopt pushdminus
+      #setopt auto_pushd
+      #setopt pushd_ignore_dups
+      #setopt pushdminus
 
-      setopt extended_history
-      setopt hist_expire_dups_first
-      setopt hist_ignore_dups
-      setopt hist_ignore_space
-      setopt hist_verify
-      setopt inc_append_history
-      setopt share_history
+      #setopt extended_history
+      #setopt hist_expire_dups_first
+      #setopt hist_ignore_dups
+      #setopt hist_ignore_space
+      #setopt hist_verify
+      #setopt inc_append_history
+      #setopt share_history
 
-      setopt auto_cd
-      setopt multios
-      setopt prompt_subst
+      #setopt auto_cd
+      #setopt multios
+      #setopt prompt_subst
 
       # ========= 自定义函数 =========
       function d () {

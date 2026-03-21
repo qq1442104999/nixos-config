@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
+  # 引入第三方插件源
   sources = import ./_sources/generated.nix {
     inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools;
   };
@@ -31,7 +32,7 @@ in
   programs.zsh = {
     enable = true;
 
-    #enableCompletion = true;
+    enableCompletion = true;
 
     history = {
       path = "${ZSH_CACHE_DIR}/zsh_history";
@@ -43,6 +44,9 @@ in
       grep = "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}";
     };
 
+    # ----------------------
+    # 插件声明式加载
+    # ----------------------
     plugins = [
       {
         name = "fzf-tab";
@@ -81,10 +85,11 @@ in
       }
     ];
 
+    # ----------------------
+    # initExtra 拆块
+    # ----------------------
     initContent = lib.mkOrder 1000 ''
-      # ======================
-      # 基础环境变量
-      # ======================
+      # ========= 环境变量 =========
       export LESS='-R'
 
       setopt GLOB_DOTS

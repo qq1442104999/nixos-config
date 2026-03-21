@@ -17,15 +17,16 @@
 
     # 设置颜色
     colors = {
-      fg      = "default";    # 普通文字
-      bg      = "default";    # 背景
-      header  = "cyan";       # 顶部 header
-      info    = "yellow";     # 信息文字
-      prompt  = "green";      # 提示符
-      pointer = "red";        # 当前选中行指针
-      marker  = "magenta";    # 多选标记
-      spinner = "yellow";     # spinner
-      fg+, bg+ = "default";   # 高亮文字/背景
+      fg      = "#D9CAB3";  # 普通文字
+      bg      = "#1C1C1C";  # 背景
+      header  = "#BD93F9";  # 顶部 header
+      info    = "#F1FA8C";  # 信息文字
+      prompt  = "#FF79C6";  # 提示符
+      pointer = "#FFB86C";  # 当前选中行指针
+      marker  = "#8BE9FD";  # 多选标记
+      spinner = "#50FA7B";  # spinner
+      "fg+"   = "#FFF1E8";  # 高亮文字
+      "bg+"   = "#3A2F2B";  # 高亮背景
     };
 
     # 对应 export FZF_CTRL_T_COMMAND 和 FZF_CTRL_T_OPTS

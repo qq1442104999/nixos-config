@@ -49,13 +49,16 @@ in
         src = sources.fzf-tab.src;
         file = "fzf-tab.plugin.zsh";
       }
-
+      {
+        name= "fzf-tab-source";
+        src = sources.fzf-tab-source.src;
+        file = "fzf-tab-source.plugin.zsh";
+      }
       {
         name = "zsh-autosuggestions";
         src = sources.zsh-autosuggestions.src;
         file = "zsh-autosuggestions.zsh";
       }
-
       {
         name = "zsh-syntax-highlighting";
         src = sources.zsh-syntax-highlighting.src;

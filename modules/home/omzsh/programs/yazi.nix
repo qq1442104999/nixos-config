@@ -3,8 +3,8 @@
 {
   programs.yazi = {
     enable = true;
-    # 自动集成 Shell，开启后可以使用 'y' 或自定义别名进入
     enableZshIntegration = true; 
+    shellWrapperName = "y";
     
     # 基础设置
     settings = {

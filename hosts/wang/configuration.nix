@@ -195,6 +195,7 @@
   # ==================================================
   environment.variables = {
     TERM = "xterm-256color";
+    COLORTERM = "truecolor";
     CLIPBOARD = "wl-copy";
   };
 

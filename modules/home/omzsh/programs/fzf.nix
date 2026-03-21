@@ -13,6 +13,7 @@
       "--layout=reverse"
       "--border"
       "--preview-window=right:60%:wrap"
+      "--color=fg:default,bg:default,spinner:yellow,header:cyan,info:yellow,pointer:red,marker:green"
     ];
 
     # 对应 export FZF_CTRL_T_COMMAND 和 FZF_CTRL_T_OPTS

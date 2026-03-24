@@ -192,27 +192,28 @@ in
       _apply_keybindings
 
       # ========= FZF自定义预览 =========
-      export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-      export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
+      #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+      #export FZF_CTRL_T_OPTS="--preview '${./scripts/preview.sh} {}'"
 
-      export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+      #export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
 
-      export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
-      export FZF_DEFAULT_OPTS="
-        --height=40%
-        --layout=reverse
-        --border
-        --info=inline
-        --preview-window=right:60%:wrap
-      "
+      #export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
+      #export FZF_DEFAULT_OPTS="
+      #  --height=40%
+      #  --layout=reverse
+      #  --border
+      #  --info=inline
+      #  --preview-window=right:60%:wrap
+      #"
+      
       # 启用 LS_COLORS
-      eval "$(dircolors -b)"
+      eval "$(dircolors ${./scripts/LS_COLORS})"
 
       # zsh 原生补全颜色
-      zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+      zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
 
       # fzf-tab 使用同样颜色
-      zstyle ':fzf-tab:*' list-colors ${(s.:.)LS_COLORS}
+      zstyle ':fzf-tab:*' list-colors ''${(s.:.)LS_COLORS}
 
       #zstyle ':fzf-tab:*' fzf-command fzf
       #zstyle ':fzf-tab:*' preview 'bash -c $FZF_TAB_CUSTOM_PREVIEW'
@@ -272,4 +273,6 @@ in
   home.file.".config/lessfilter".source = ./scripts/lessfilter;
 
   home.file.".config/fzf/preview.sh".source = ./scripts/preview.sh;
+
+  xdg.configFile."dircolors".source = ./scripts/LS_COLORS;
 }

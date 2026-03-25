@@ -155,6 +155,7 @@ in
 
       #export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
       export FZF_DEFAULT_OPTS="
+        "$FZF_DEFAULT_OPTS
         --height=40%
         --layout=reverse
         --border

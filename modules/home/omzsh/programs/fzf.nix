@@ -8,12 +8,19 @@
     defaultCommand = "fd --type f --hidden --follow --exclude .git";
 
     # 对应 export FZF_DEFAULT_OPTS
-    defaultOptions = [
-      "--height=40%"
-      "--layout=reverse"
-      "--border"
-      "--preview-window=right:60%:wrap"
-    ];
+    #defaultOptions = [
+    #  "--height=40%"
+    #  "--layout=reverse"
+    #  "--border"
+    #  "--preview-window=right:60%:wrap"
+    #];
+
+    extraOptions = ''
+      --height=40%
+      --layout=reverse
+      --border
+      --preview-window=right:60%:wrap
+    '';
 
     # 设置颜色
     #colors = {

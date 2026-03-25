@@ -142,7 +142,7 @@ in
       #export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
 
       # fzf-tab 使用 Stylix 颜色
-      zstyle ':fzf-tab:*' use-fzf-default-opts yes
+      #zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
       # 更丝滑体验
       zstyle ':fzf-tab:*' fzf-flags '--height=40% --layout=reverse'

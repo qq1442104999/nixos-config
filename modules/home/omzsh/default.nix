@@ -208,7 +208,7 @@ in
       #"
       
       # 启用 LS_COLORS
-      eval "$(dircolors ${./scripts/LS_COLORS})"
+      eval "$(dircolors ${./scripts/dircolors/dircolors.256dark})"
 
       # zsh 原生补全颜色
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}

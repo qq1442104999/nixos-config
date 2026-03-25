@@ -244,6 +244,7 @@ in
   home.packages = with pkgs; [
     file
     fd
+    ripgrep
     lesspipe
 
     python3Packages.pandas

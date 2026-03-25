@@ -2,7 +2,7 @@
 {
   programs.fzf = {
     enable = true;
-    enableZshIntegration = true;
+    #enableZshIntegration = true;
     
     # 对应 export FZF_DEFAULT_COMMAND
     defaultCommand = "fd --type f --hidden --follow --exclude .git";

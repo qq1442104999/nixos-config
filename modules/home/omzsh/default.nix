@@ -154,13 +154,13 @@ in
       #export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
 
       #export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude .git'
-      #export FZF_DEFAULT_OPTS="
-      #  --height=40%
-      #  --layout=reverse
-      #  --border
-      #  --info=inline
-      #  --preview-window=right:60%:wrap
-      #"
+      export FZF_DEFAULT_OPTS="
+        --height=40%
+        --layout=reverse
+        --border
+        --info=inline
+        --preview-window=right:60%:wrap
+      "
 
       # ========= 自定义函数 =========
       function d () {

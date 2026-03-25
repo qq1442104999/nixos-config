@@ -15,13 +15,6 @@
     #  "--preview-window=right:60%:wrap"
     #];
 
-    extraOptions = ''
-      --height=40%
-      --layout=reverse
-      --border
-      --preview-window=right:60%:wrap
-    '';
-
     # 设置颜色
     #colors = {
     #  fg      = "#D9CAB3";  # 普通文字

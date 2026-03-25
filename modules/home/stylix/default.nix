@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs.stylix.homeManagerModules.stylix
+    inputs.stylix.homeModules.stylix
   ];
 
   stylix = {
@@ -10,7 +10,7 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    image = ./wallpaper.png;
+    #image = ./wallpaper.png;
 
     polarity = "dark";
 
@@ -29,12 +29,7 @@
 
     # 🎯 自动应用
     targets = {
-      kitty.enable = true;
-      zsh.enable = true;
-      neovim.enable = true;
       fzf.enable = true;
-      bat.enable = true;
-      git.enable = true;
     };
   };
 

@@ -17,6 +17,8 @@
 
     # Noctalia Shell 配置
     ../../modules/home/Noctalia/default.nix
+    
+    ../../modules/home/stylix/default.nix
   ];
 
   # ==================================================

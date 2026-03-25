@@ -142,10 +142,10 @@ in
       #export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
 
       # fzf-tab 使用 Stylix 颜色
-      #zstyle ':fzf-tab:*' use-fzf-default-opts yes
+      zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
       # 更丝滑体验
-      zstyle ':fzf-tab:*' fzf-flags '--height=40% --layout=reverse'
+      #zstyle ':fzf-tab:*' fzf-flags '--height=40% --layout=reverse'
 
       # ========= FZF自定义预览 =========
       #export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -162,7 +162,8 @@ in
       #  --preview-window=right:60%:wrap
       #"
 
-      export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=40% --layout=reverse --border --info=inline --preview-window=right:60%:wrap"
+      #FZF_DEFAULT_OPTS+=" --height=40% --layout=reverse --border --preview-window=right:60%:wrap"
+      #export FZF_DEFAULT_OPTS
 
       # ========= 自定义函数 =========
       function d () {
@@ -255,6 +256,7 @@ in
     fd
     ripgrep
     lesspipe
+    fzf
 
     python3Packages.pandas
     python3Packages.plotext

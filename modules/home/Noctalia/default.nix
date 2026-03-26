@@ -4,8 +4,8 @@
     inputs.noctalia.homeModules.default
   ];
   # configure options
-  programs.noctalia-shell = {
-    enable = true;
+  programs.noctalia-shell.enable = true;
+    #enable = true;
     #settings = {
     #  # configure noctalia here
     #  bar = {
@@ -59,10 +59,12 @@
     #  };
     #};
     # this may also be a string or a path to a JSON file.
-  };
+  #};
 
 
   xdg.configFile."noctalia/settings.json".source =
-    config.lib.file.mkOutOfStoreSymlink 
-      "${toString ./settings.json}";
+    pkgs.lib.mkForce (
+      config.lib.file.mkOutOfStoreSymlink 
+        "${toString ./settings.json}"
+    );
 }

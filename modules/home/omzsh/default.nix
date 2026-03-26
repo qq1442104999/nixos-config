@@ -132,17 +132,17 @@ in
 #      eval "$(dircolors ${./scripts/dircolors/dircolors.256dark})"
 
       # zsh 原生补全颜色
-#      zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
+      zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
 
       # fzf-tab 使用同样颜色
-#      zstyle ':fzf-tab:*' list-colors ''${(s.:.)LS_COLORS}
+      zstyle ':fzf-tab:*' list-colors ''${(s.:.)LS_COLORS}
 
       #zstyle ':fzf-tab:*' fzf-command fzf
       #zstyle ':fzf-tab:*' preview 'bash -c $FZF_TAB_CUSTOM_PREVIEW'
       #export FZF_TAB_CUSTOM_PREVIEW="${./scripts/preview.sh} {}"
 
       # fzf-tab 使用 Stylix 颜色
-      #zstyle ':fzf-tab:*' use-fzf-default-opts yes
+      zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
       # 更丝滑体验
       #zstyle ':fzf-tab:*' fzf-flags '--height=40% --layout=reverse'

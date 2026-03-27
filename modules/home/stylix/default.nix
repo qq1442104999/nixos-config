@@ -1,5 +1,4 @@
 { config, pkgs, inputs, ... }:
-
 {
   imports = [
     inputs.stylix.homeModules.stylix
@@ -12,6 +11,10 @@
 
     targets = {
       #fzf.enable = true;
+      nixvim = {
+        enable = true;
+        plugin = "base16-nvim";
+      };
     };
   };
 

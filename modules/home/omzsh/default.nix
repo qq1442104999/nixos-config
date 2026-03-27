@@ -17,6 +17,7 @@ in
     ./programs/zoxide.nix
     ./programs/yazi.nix
     ./programs/television.nix
+    ./programs/ghostty.nix
   ];
 
   # ======================

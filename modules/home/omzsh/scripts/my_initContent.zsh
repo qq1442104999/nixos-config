@@ -6,24 +6,24 @@ autoload -Uz add-zsh-hook
 zmodload -i zsh/complist
 autoload -U colors && colors
 
-#unsetopt correct
-#setopt GLOB_DOTS
+unsetopt correct
+setopt GLOB_DOTS
 
-#setopt auto_pushd
-#setopt pushd_ignore_dups
-#setopt pushdminus
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
 
-#setopt extended_history
-#setopt hist_expire_dups_first
-#setopt hist_ignore_dups
-#setopt hist_ignore_space
-#setopt hist_verify
-#setopt inc_append_history
-#setopt share_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
 
-#setopt auto_cd
-#setopt multios
-#setopt prompt_subst
+setopt auto_cd
+setopt multios
+setopt prompt_subst
 
 # ========= FZF-tab自定义预览 =========      
 # 启用 LS_COLORS

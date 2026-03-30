@@ -1,4 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
+let
+  tmuxConf = pkgs.fetchFromGitHub {
+    owner = "gpakosz";
+    repo = ".tmux";
+    rev = "master";
+    sha256 = "sha256-xxxxx";
+  };
+in
 {
   programs.tmux = {
     enable = true;

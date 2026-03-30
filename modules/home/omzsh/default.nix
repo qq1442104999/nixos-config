@@ -18,6 +18,7 @@ in
     ./programs/yazi.nix
     ./programs/television.nix
     ./programs/ghostty.nix
+    ./programs/tmux.nix
   ];
 
   # ======================

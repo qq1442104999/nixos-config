@@ -80,24 +80,6 @@ in
       }
     ];
 
-    #setOptions = [
-    #  "GLOB_DOTS"
-    #  "AUTO_PUSHD"
-    #  "PUSHD_IGNORE_DUPS"
-    #  "PUSHDMINUS"
-    #  "EXTENDED_HISTORY"
-    #  "HIST_EXPIRE_DUPS_FIRST"
-    #  "HIST_IGNORE_DUPS"
-    #  "HIST_IGNORE_SPACE"
-    #  "HIST_VERIFY"
-    #  "INC_APPEND_HISTORY"
-    #  "SHARE_HISTORY"
-    #  "AUTO_CD"
-    #  "MULTIOS"
-    #  "PROMPT_SUBST"
-    #  "NO_CORRECT"
-    #];
-
     # ----------------------
     # initExtra 拆块
     # ----------------------

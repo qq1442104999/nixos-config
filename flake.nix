@@ -65,7 +65,7 @@
               inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
               {
                 home-manager = {
-                  useGlobalPkgs = true;
+                  #useGlobalPkgs = true;
                   useUserPackages = true;
                   extraSpecialArgs = { inherit inputs; };
                   users.wang = import ./home/wang/home.nix;
@@ -79,7 +79,6 @@
             specialArgs = { inherit inputs; };
             modules = [ ./hosts/laptop/configuration.nix ];
           };
-
         };
       };
     };

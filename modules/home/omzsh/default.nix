@@ -107,7 +107,6 @@ in
         }
       )
     );
-
   };
 
   # ======================
@@ -139,7 +138,7 @@ in
   # Session 环境变量
   # ======================
   home.sessionVariables = {
-    LESSOPEN  = "|${config.home.homeDirectory}/.config/lessfilter %s";
+    LESSOPEN  = "|${./scripts/lessfilter} %s";
   };
 
   # ======================

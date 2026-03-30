@@ -25,6 +25,7 @@ in
   # ======================
   programs.zsh = {
     enable = true;
+    dotDir = ".config/zsh";
 
     enableCompletion = true;
 
@@ -144,9 +145,9 @@ in
   # ======================
   # 使用外部 lessfilter 文件
   # ======================
-  home.file.".config/lessfilter".source = ./scripts/lessfilter;
+  #home.file.".config/lessfilter".source = ./scripts/lessfilter;
 
-  home.file.".config/fzf/preview.sh".source = ./scripts/preview.sh;
+  #home.file.".config/fzf/preview.sh".source = ./scripts/preview.sh;
 
-  xdg.configFile."dircolors".source = ./scripts/LS_COLORS;
+  #xdg.configFile."dircolors".source = ./scripts/LS_COLORS;
 }

@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
   tmuxConf = pkgs.fetchFromGitHub {
     owner = "gpakosz";
     repo = ".tmux";
     rev = "master";
-    sha256 = "sha256-xxxxx";
+    sha256 = "sha256-nXm664l84YSwZeRM4Hsweqgz+OlpyfwXcgEdyNGhaGA=";
   };
 in
 {
@@ -14,5 +14,5 @@ in
       builtins.readFile "${tmuxConf}/.tmux.conf";
   };
 
-  xdg.configFile."/tmux/.tmux.conf.local".source = ../scripts/tmux.conf.local;
+  xdg.configFile."tmux/.tmux.conf.local".source = ../scripts/.tmux.conf.local;
 }

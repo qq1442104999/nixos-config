@@ -71,5 +71,8 @@
     tree
     fastfetch
     pciutils
+
+    google-chrome
+    vscode
   ];
 }

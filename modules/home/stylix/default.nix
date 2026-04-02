@@ -10,11 +10,14 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     targets = {
-      #fzf.enable = true;
+      noctalia-shell = {
+        enable = false;
+      };
       nixvim = {
         enable = true;
         plugin = "base16-nvim";
       };
+
     };
   };
 

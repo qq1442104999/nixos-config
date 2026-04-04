@@ -13,6 +13,9 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
+HISTFILE="@ZSH_CACHE_DIR@/zsh_history";
+HISTSIZE=50000
+SAVEHIST=10000
 setopt extended_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups

@@ -26,15 +26,10 @@ in
   # ======================
   programs.zsh = {
     enable = true;
+
+    enableCompletion = false;
+    
     dotDir = "${config.xdg.configHome}/zsh";
-
-    enableCompletion = true;
-
-    history = {
-      path = "${ZSH_CACHE_DIR}/zsh_history";
-      size = 50000;
-      save = 10000;
-    };
 
     shellAliases = {
       grep = "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}";
@@ -84,13 +79,37 @@ in
     # ----------------------
     # initExtra 拆块
     # ----------------------
-    initContent = lib.mkOrder 1000 (
-      builtins.readFile (
-        pkgs.replaceVars ./scripts/my_initContent.zsh{
-          ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh"; # Nix 会自动把这个路径替换成 /nix/store/...
-        }
-      )
-    );
+    #initContent = lib.mkOrder 1000 (
+    #  builtins.readFile (
+    #    pkgs.replaceVars ./scripts/my_initContent.zsh{
+    #      ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh"; # Nix 会自动把这个路径替换成 /nix/store/...
+    #    }
+    #  )
+    #);
+
+    initContent = lib.mkMerge [
+      (lib.mkOrder 500 ''
+        zmodload zsh/zprof
+        export ZSH_DISABLE_COMPFIX=true
+        export ZSH_COMPDUMP="$HOME/.config/zsh/.zcompdump"
+        autoload -Uz compinit
+        compinit -d "$ZSH_COMPDUMP" -C
+      '')
+      (lib.mkOrder 1000 (
+        builtins.readFile (
+          pkgs.replaceVars ./scripts/my_initContent.zsh{
+            ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh";
+          }
+        )
+      ))
+      (lib.mkOrder 1500 ''
+        zprof
+      '')
+    ];
+
+
+
+
   };
 
   # ======================

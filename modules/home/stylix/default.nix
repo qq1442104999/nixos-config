@@ -23,11 +23,11 @@
         name = "Source Han Sans SC";
       };
       emoji = {
-        package = pkgs.noto-fonts-emoji;
+        package = pkgs.emoji-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
       sizes = {
-        application = 12;
+        applications = 12;
         desktop = 10;
         terminal = 12;
       };

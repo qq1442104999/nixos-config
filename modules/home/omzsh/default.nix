@@ -89,7 +89,7 @@ in
 
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
-        zmodload zsh/zprof
+        #zmodload zsh/zprof
         export ZSH_DISABLE_COMPFIX=true
         export ZSH_COMPDUMP="$HOME/.config/zsh/.zcompdump"
         autoload -Uz compinit
@@ -103,7 +103,7 @@ in
         )
       ))
       (lib.mkOrder 1500 ''
-        zprof
+        #zprof
       '')
     ];
 

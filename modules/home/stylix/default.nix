@@ -23,7 +23,7 @@
         name = "Source Han Sans SC";
       };
       emoji = {
-        package = pkgs.emoji-fonts-color-emoji;
+        package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
       sizes = {
@@ -31,6 +31,19 @@
         desktop = 10;
         terminal = 12;
       };
+    };
+
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+    };
+
+    icons = {
+      enable = true;
+      package = pkgs.papirus-icon-theme;
+      light = "Papirus-Light";
+      dark = "Papirus-Dark";
     };
 
     targets = {

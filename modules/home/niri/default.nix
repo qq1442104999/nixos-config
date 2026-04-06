@@ -9,10 +9,11 @@
   #  enable = true;
   #};
 
-  xdg.configFile."niri/config.kdl".source = lib.mkForce (
-    config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/nixos/modules/home/niri/config.kdl"
-  );
+  home.file.".config/niri/config.kdl" = {
+    source = config.lib.file.mkOutOfStoreSymlink 
+      "${config.home.homeDirectory}/nixos/modules/home/niri/config.kdl";
+    recursive = false;
+  };
 
   #xdg.configFile."niri/config.kdl".source =
   #  config.lib.file.mkOutOfStoreSymlink 

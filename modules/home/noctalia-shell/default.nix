@@ -12,5 +12,5 @@
 
   xdg.configFile."noctalia/settings.json".source =
     config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/nixos/modules/home/noctalia/settings.json";
+      "${config.home.homeDirectory}/nixos/modules/home/noctalia-shell/settings.json";
 }

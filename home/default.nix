@@ -12,7 +12,7 @@
     ../modules/home/nixvim/default.nix
 
     # Noctalia Shell 配置
-    ../modules/home/Noctalia/default.nix
+    ../modules/home/noctalia-shell/default.nix
     
     # stylix 配置
     ../modules/home/stylix/default.nix

@@ -11,7 +11,7 @@
 
   xdg.configFile."niri/config.kdl".source =
     config.lib.file.mkOutOfStoreSymlink 
-      "${toString ./config.kdl}";
+      "${config.home.homeDirectory}/nixos/home/niri/config.kdl";
 
   home.packages = with pkgs; [
     kitty

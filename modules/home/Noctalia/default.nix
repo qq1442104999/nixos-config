@@ -6,7 +6,11 @@
   
   programs.noctalia-shell.enable = true;
 
+  #xdg.configFile."noctalia/settings.json".source =
+  #  config.lib.file.mkOutOfStoreSymlink 
+  #    "${toString ./settings.json}";
+
   xdg.configFile."noctalia/settings.json".source =
     config.lib.file.mkOutOfStoreSymlink 
-      "${toString ./settings.json}";
+      "${config.home.homeDirectory}/nixos/modules/home/noctalia/settings.json";
 }

@@ -57,10 +57,10 @@
       };
 
       kde.enable = false;
-      
+
       qt = {
         enable = true;
-        platform = "qtct";
+        platform = "kvantum";
       };
     };
   };

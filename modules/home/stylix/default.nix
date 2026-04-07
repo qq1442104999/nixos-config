@@ -50,12 +50,18 @@
       noctalia-shell = {
         enable = false;
       };
+
       nixvim = {
         enable = true;
         plugin = "base16-nvim";
       };
+
       kde.enable = false;
-      qt.enable = true;
+      
+      qt = {
+        enable = true;
+        platform = "qtct";
+      };
     };
   };
 

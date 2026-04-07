@@ -55,6 +55,7 @@
         plugin = "base16-nvim";
       };
       kde.enable = false;
+      qt.enable = true;
     };
   };
 

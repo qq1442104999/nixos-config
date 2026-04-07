@@ -67,5 +67,6 @@
 
   home.packages = with pkgs; [
     base16-schemes
+    libsForQt5.qtstyleplugin-kvantum
   ];
 }

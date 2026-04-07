@@ -18,7 +18,6 @@
 
   home.packages = with pkgs; [
     kitty
-    mako
     fuzzel
   ];
 }

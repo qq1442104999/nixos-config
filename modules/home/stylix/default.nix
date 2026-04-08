@@ -89,8 +89,8 @@
   };
 
   home.sessionVariables = {
-    #QT_QPA_PLATFORMTHEME = "qtct";
-    #QT_STYLE_OVERRIDE = "kvantum";
+    QT_QPA_PLATFORMTHEME = "qtct";
+    QT_STYLE_OVERRIDE = "kvantum";
         
     QT_QPA_PLATFORM = "wayland";
   };

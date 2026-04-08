@@ -75,7 +75,7 @@
     theme = {
       name = "catppuccin-mocha-blue-standard";
       package = pkgs.catppuccin-gtk;
-    }
+    };
   };
 
   qt = {

@@ -13,7 +13,7 @@
   # 2. 使用 NixOS 官方 Qt 配置模块（它会自动帮你设好环境变量）
   qt = {
     enable = true;
-    platformTheme = "qtct"; # 这会自动处理 qt5ct 和 qt6ct 的映射
+    platformTheme = "qt5ct"; # 这会自动处理 qt5ct 和 qt6ct 的映射
     style = "kvantum";
   };
 

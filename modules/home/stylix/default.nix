@@ -88,12 +88,17 @@
   #  };
   #};
 
-  home.sessionVariables = {
+  systemd.user.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
-    #QT_STYLE_OVERRIDE = "kvantum";
-        
+    QT_STYLE_OVERRIDE = "kvantum";
     QT_QPA_PLATFORM = "wayland";
   };
+
+  #home.sessionVariables = {
+  #  QT_QPA_PLATFORMTHEME = "qtct";
+  #  QT_STYLE_OVERRIDE = "kvantum";
+  #  QT_QPA_PLATFORM = "wayland";
+  #};
 
   home.packages = with pkgs; [
     #base16-schemes

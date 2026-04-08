@@ -92,7 +92,6 @@
     QT_STYLE_OVERRIDE = "kvantum";
         
     QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = "qtct";
   };
 
   home.packages = with pkgs; [
@@ -104,7 +103,7 @@
 
     libsForQt5.qtstyleplugin-kvantum
     catppuccin-kvantum
-    
+
     vlc
   ];
 }

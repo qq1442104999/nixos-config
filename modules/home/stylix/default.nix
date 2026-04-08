@@ -63,7 +63,7 @@
       gtk.enable = false;  # 由 home-manager 的 gtk 模块处理
 
       qt = {
-        enable = true;
+        enable = false;  # 由 home-manager 的 qt 模块处理
         #platform = "qtct";
       };
     };

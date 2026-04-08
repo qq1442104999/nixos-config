@@ -99,7 +99,7 @@
     base16-schemes
 
     libsForQt5.qt5ct
-    qt6ct
+    kdePackages.qt6ct
     kdePackages.breeze
 
     libsForQt5.qtstyleplugin-kvantum

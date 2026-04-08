@@ -9,6 +9,8 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
+    polarity = "dark"; 
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
@@ -56,18 +58,21 @@
         plugin = "base16-nvim";
       };
 
-      kde.enable = false;
+      kde.enable = true;
+
+      gtk.enable = true;
 
       qt = {
         enable = true;
-        platform = "kvantum";
+        #platform = "qtct";
       };
     };
   };
 
   home.packages = with pkgs; [
     base16-schemes
-    libsForQt5.qtstyleplugin-kvantum
+    #libsForQt5.qt5ct
+    #qt6Packages.qt6ct
     vlc
   ];
 }

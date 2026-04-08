@@ -69,10 +69,42 @@
     };
   };
 
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "catppuccin-mocha-blue-standard";
+      package = pkgs.catppuccin-gtk;
+  };
+
+  qt = {
+    enable = true;
+
+    platformTheme.name = "qtct";  # 关键
+
+    style = {
+      name = "kvantum";           # 推荐
+    };
+  };
+
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qtct";
+    QT_STYLE_OVERRIDE = "kvantum";
+        
+    QT_QPA_PLATFORM = "wayland";
+    QT_QPA_PLATFORMTHEME = "qtct";
+  };
+
   home.packages = with pkgs; [
     base16-schemes
-    #libsForQt5.qt5ct
-    #qt6Packages.qt6ct
+
+    libsForQt5.qt5ct
+    qt6ct
+    kdePackages.breeze
+
+    libsForQt5.qtstyleplugin-kvantum
+    catppuccin-kvantum
+    
     vlc
   ];
 }

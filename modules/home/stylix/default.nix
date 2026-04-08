@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 {
   imports = [
     inputs.stylix.homeModules.stylix
@@ -60,50 +60,50 @@
 
       kde.enable = false;
 
-      gtk.enable = false;
+      gtk.enable = true;
 
       qt = {
-        enable = false;
+        enable = true;
         #platform = "qtct";
       };
     };
   };
 
-  gtk = {
-    enable = true;
+  #gtk = {
+  #  enable = true;
 
-    theme = {
-      name = "catppuccin-mocha-blue-standard";
-      package = pkgs.catppuccin-gtk;
-    };
-  };
+  #  theme = {
+  #    name = "catppuccin-mocha-blue-standard";
+  #    package = pkgs.catppuccin-gtk;
+  #  };
+  #};
 
-  qt = {
-    enable = true;
+  #qt = {
+  #  enable = true;
 
-    platformTheme.name = "qtct";  # 关键
+  #  platformTheme.name = "qtct";  # 关键
 
-    style = {
-      name = "kvantum";           # 推荐
-    };
-  };
+  #  style = {
+  #    name = "kvantum";           # 推荐
+  #  };
+  #};
 
   home.sessionVariables = {
-    #QT_QPA_PLATFORMTHEME = "qtct";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
     #QT_STYLE_OVERRIDE = "kvantum";
         
     QT_QPA_PLATFORM = "wayland";
   };
 
   home.packages = with pkgs; [
-    base16-schemes
+    #base16-schemes
 
-    libsForQt5.qt5ct
-    kdePackages.qt6ct
-    kdePackages.breeze
+    #libsForQt5.qt5ct
+    #kdePackages.qt6ct
+    #kdePackages.breeze
 
-    libsForQt5.qtstyleplugin-kvantum
-    catppuccin-kvantum
+    #libsForQt5.qtstyleplugin-kvantum
+    #catppuccin-kvantum
 
     vlc
   ];

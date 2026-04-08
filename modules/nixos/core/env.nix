@@ -5,8 +5,7 @@
     COLORTERM = "truecolor";
     CLIPBOARD = "wl-copy";
 
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    QT_STYLE_OVERRIDE = "kvantum";
+    QT_QPA_PLATFORMTHEME = "qtct";
     QT_QPA_PLATFORM = "wayland";
   };
 

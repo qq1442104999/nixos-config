@@ -58,12 +58,12 @@
         plugin = "base16-nvim";
       };
 
-      kde.enable = true;
+      kde.enable = false;
 
-      gtk.enable = false;  # 由 home-manager 的 gtk 模块处理
+      gtk.enable = false;
 
       qt = {
-        enable = false;  # 由 home-manager 的 qt 模块处理
+        enable = false;
         #platform = "qtct";
       };
     };

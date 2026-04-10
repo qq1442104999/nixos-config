@@ -17,6 +17,11 @@
     style = "kvantum";
   };
 
+  environment.variables = {
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+  };
+
   # 3. 确保没有手动定义冲突的变量
   # 检查你的 configuration.nix 或 home.nix，删掉手动设置的：
   # QT_STYLE_OVERRIDE = "kvantum"; 

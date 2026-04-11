@@ -62,43 +62,9 @@
 
       gtk.enable = true;
 
-      qt = {
-        enable = true;
-        #platform = "qtct";
-      };
+      qt.enable = true;
+
+      fcitx5.enable = true;
     };
   };
-
-  #gtk = {
-  #  enable = true;
-
-  #  theme = {
-  #    name = "catppuccin-mocha-blue-standard";
-  #    package = pkgs.catppuccin-gtk;
-  #  };
-  #};
-
-  #qt = {
-  #  enable = true;
-
-  #  platformTheme.name = "qtct";  # 关键
-
-  #  style = {
-  #    name = "kvantum";           # 推荐
-  #  };
-  #};
-
-
-  home.packages = with pkgs; [
-    #base16-schemes
-
-    #libsForQt5.qt5ct
-    #kdePackages.qt6ct
-    #kdePackages.breeze
-
-    #libsForQt5.qtstyleplugin-kvantum
-    #catppuccin-kvantum
-
-    vlc
-  ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
 
@@ -16,5 +16,9 @@
     
     # stylix 配置
     ../modules/home/stylix/default.nix
+  ];
+
+  home.packages = with pkgs; [
+    vlc
   ];
 }

@@ -19,5 +19,6 @@
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
     INPUT_METHOD = "fcitx";
+    GLFW_IM_MODULE = "ibus";
   };
 }

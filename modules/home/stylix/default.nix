@@ -64,7 +64,7 @@
 
       qt.enable = true;
 
-      fcitx5.enable = false;
+      #fcitx5.enable = false;
     };
   };
 }

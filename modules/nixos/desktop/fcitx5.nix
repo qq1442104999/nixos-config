@@ -17,8 +17,4 @@
     XMODIFIERS = "@im=fcitx";
     INPUT_METHOD = "fcitx";
   };
-
-  services.fcitx5 = {
-    enable = true;
-  };
 }

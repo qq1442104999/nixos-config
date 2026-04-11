@@ -271,6 +271,7 @@ layout {
 // spawn-at-startup "waybar"
 
 spawn-at-startup "noctalia-shell"
+spawn-at-startup "fcitx5"
 
 //spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "NIXOS_OZONE_WL"
@@ -364,7 +365,7 @@ debug {
 environment {
   QT_QPA_PLATFORM "wayland"
   QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-  
+
   GTK_IM_MODULE "fcitx"
   QT_IM_MODULE "fcitx"
   XMODIFIERS "@im=fcitx"

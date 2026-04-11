@@ -18,11 +18,11 @@
   };
 
   environment.variables = {
-    #QT_QPA_PLATFORM = "wayland";
+    QT_QPA_PLATFORM = "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_X11_NO_MITSHM = "1";
     NIXOS_OZONE_WL = "1";
-    QT_QPA_PLATFORM = "wayland;xcb";
+    #QT_QPA_PLATFORM = "wayland;xcb";
   };
 
   # 3. 确保没有手动定义冲突的变量

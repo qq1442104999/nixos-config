@@ -8,6 +8,9 @@
       qt6Packages.fcitx5-chinese-addons   # 拼音
       qt6Packages.fcitx5-configtool       # 图形配置
       fcitx5-gtk              # GTK 支持
+
+      catppuccin-fcitx5
+      fcitx5-mellow-themes
     ];
   };
 

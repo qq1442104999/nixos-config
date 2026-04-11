@@ -63,8 +63,6 @@
       gtk.enable = true;
 
       qt.enable = true;
-
-      fcitx5.enable = true;
     };
   };
 }

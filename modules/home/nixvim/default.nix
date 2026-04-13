@@ -37,6 +37,7 @@
       ./plugins/git.nix
       ./plugins/bufferline.nix
       ./plugins/mini.nix
+      ./plugins/hop.nix
     ];
   };
 }

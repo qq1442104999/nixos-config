@@ -359,9 +359,9 @@ window-rule {
 
 layer-rule {
     match namespace="fcitx"
-    blur true
+    //blur true
     opacity 0.92
-    clip-to-geometry true
+    //clip-to-geometry true
     geometry-corner-radius 12
 }
 

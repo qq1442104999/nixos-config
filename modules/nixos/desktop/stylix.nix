@@ -52,9 +52,14 @@
       #  enable = false;
       #};
 
+      #nixvim = {
+      #  enable = true;
+      #  plugin = "base16-nvim";
+      #};
+
       nixvim = {
-        enable = false;
-        plugin = "base16-nvim";
+        enable = true;
+        plugin = "catppuccin-mocha";
       };
 
       #kde.enable = false;

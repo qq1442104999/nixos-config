@@ -15,7 +15,7 @@
     ../modules/home/noctalia-shell/default.nix
     
     # stylix 配置
-    ../modules/home/stylix/default.nix
+    #../modules/home/stylix/default.nix
   ];
 
   home.packages = with pkgs; [

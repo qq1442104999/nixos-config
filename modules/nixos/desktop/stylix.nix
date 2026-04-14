@@ -53,7 +53,7 @@
       #};
 
       nixvim = {
-        enable = true;
+        enable = false;
         plugin = "base16-nvim";
       };
 

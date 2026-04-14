@@ -16,6 +16,7 @@
     
     # stylix 配置
     #../modules/home/stylix/default.nix
+    inputs.stylix.nixosModules.stylix
   ];
 
   home.packages = with pkgs; [

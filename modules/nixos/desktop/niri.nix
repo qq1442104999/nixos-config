@@ -16,6 +16,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    noctalia-shell
     wl-clipboard
     xwayland-satellite
   ];

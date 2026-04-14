@@ -14,7 +14,7 @@
     ../modules/nixos/system/packages.nix
 
     ../modules/nixos/desktop/niri.nix
-    #../modules/nixos/desktop/gtk-qt.nix
+    ../modules/nixos/desktop/gtk-qt.nix
     ../modules/nixos/desktop/fcitx5.nix
     ../modules/nixos/desktop/stylix.nix
   ];

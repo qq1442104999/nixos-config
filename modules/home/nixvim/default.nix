@@ -21,7 +21,7 @@
       ./core/keymaps.nix
       ./core/autocmds.nix
 
-      ./plugins/ui/colorschemes.nix
+      #./plugins/ui/colorschemes.nix
       ./plugins/ui/lualine.nix
       ./plugins/ui/noice.nix
       ./plugins/ui/notify.nix

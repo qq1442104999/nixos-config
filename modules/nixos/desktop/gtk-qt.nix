@@ -22,11 +22,5 @@
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_X11_NO_MITSHM = "1";
     NIXOS_OZONE_WL = "1";
-    #QT_QPA_PLATFORM = "wayland;xcb";
   };
-
-  # 3. 确保没有手动定义冲突的变量
-  # 检查你的 configuration.nix 或 home.nix，删掉手动设置的：
-  # QT_STYLE_OVERRIDE = "kvantum"; 
-  # QT_QPA_PLATFORMTHEME = "qtct";
 }

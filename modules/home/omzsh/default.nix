@@ -114,6 +114,7 @@ in
   # ======================
   home.packages = with pkgs; [
     lesspipe
+    fzf
     file        # CLI 文件浏览器
     fd          # CLI 文件搜索工具
     ripgrep     # CLI rg搜索工具

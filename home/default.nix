@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
 
@@ -16,7 +16,6 @@
     
     # stylix 配置
     #../modules/home/stylix/default.nix
-    inputs.stylix.homeModules.stylix
   ];
 
   home.packages = with pkgs; [

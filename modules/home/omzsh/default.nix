@@ -113,11 +113,11 @@ in
   # 软件包
   # ======================
   home.packages = with pkgs; [
-    file
-    fd
-    ripgrep
     lesspipe
-    fzf
+    file        # CLI 文件浏览器
+    fd          # CLI 文件搜索工具
+    ripgrep     # CLI rg搜索工具
+    tree        # 文件树工具
 
     python3Packages.pandas
     python3Packages.plotext

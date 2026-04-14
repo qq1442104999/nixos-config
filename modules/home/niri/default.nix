@@ -10,14 +10,6 @@
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
-  # 使用 home.file 并强制覆盖
-  #home.file.".config/niri/config.kdl" = {
-  #  source = lib.mkForce (config.lib.file.mkOutOfStoreSymlink 
-  #    "${config.home.homeDirectory}/nixos/modules/home/niri/config.kdl");
-  #};
-
   home.packages = with pkgs; [
-    kitty
-    fuzzel
   ];
 }

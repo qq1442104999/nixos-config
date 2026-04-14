@@ -30,7 +30,6 @@
       };
       sizes = {
         applications = 13;
-        #desktop = 10;
         terminal = 15;
       };
     };
@@ -63,8 +62,6 @@
       gtk.enable = true;
 
       qt.enable = true;
-
-      #fcitx5.enable = false;
     };
   };
 }

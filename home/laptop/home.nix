@@ -52,16 +52,6 @@
   # 用户软件
   # ==================================================
   home.packages = with pkgs; [
-    # 终端
-    kitty
-
-    # CLI 工具
-    ripgrep
-    tree
-    fastfetch
-    pciutils
-
     google-chrome
-    vscode
   ];
 }

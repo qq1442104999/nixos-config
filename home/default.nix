@@ -19,6 +19,13 @@
   ];
 
   home.packages = with pkgs; [
-    vlc
+    kitty       # 终端
+    fastfetch   # 系统信息工具
+    pciutils    # lspci 工具
+    tofi        # 应用启动器
+
+    vlc         # 视频播放器
+    imagemagick # 图像处理工具
+    ffmpeg      # 视频处理工具
   ];
 }

@@ -52,10 +52,10 @@
       #  enable = false;
       #};
 
-      #nixvim = {
-      #  enable = true;
-      #  plugin = "base16-nvim";
-      #};
+      nixvim = {
+        enable = true;
+        plugin = "base16-nvim";
+      };
 
       #nixvim.enable = false;
 

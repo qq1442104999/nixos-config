@@ -1,7 +1,7 @@
 { config, pkgs, inputs, lib, ... }:
 {
   imports = [
-    inputs.stylix.homeModules.stylix
+    inputs.stylix.nixosModules.stylix
   ];
 
   stylix = {
@@ -48,16 +48,16 @@
     };
 
     targets = {
-      noctalia-shell = {
-        enable = false;
-      };
+      #noctalia-shell = {
+      #  enable = false;
+      #};
 
       nixvim = {
         enable = true;
         plugin = "base16-nvim";
       };
 
-      kde.enable = false;
+      #kde.enable = false;
 
       gtk.enable = true;
 

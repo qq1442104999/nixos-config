@@ -57,7 +57,7 @@
       #  plugin = "base16-nvim";
       #};
 
-      nixvim = false;
+      nixvim.enable = false;
 
       #kde.enable = false;
 

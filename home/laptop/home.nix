@@ -53,7 +53,7 @@
   # ==================================================
   home.packages = with pkgs; [
     google-chrome
-    doublecmd-qt
+    doublecmd
     kdePackages.dolphin
   ];
 }

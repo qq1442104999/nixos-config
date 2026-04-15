@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   users.users.wang = {
     isNormalUser = true;        # 普通用户

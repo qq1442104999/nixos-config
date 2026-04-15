@@ -9,7 +9,7 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-    #polarity = "dark"; 
+    polarity = "dark"; 
 
     fonts = {
       monospace = {
@@ -48,22 +48,7 @@
     };
 
     targets = {
-      #noctalia-shell = {
-      #  enable = false;
-      #};
-
-      # nixvim = {
-        # enable = true;
-        # plugin = "base16-nvim";
-      # };
-
       nixvim.enable = false;
-
-      #kde.enable = false;
-
-      #gtk.enable = true;
-
-      #qt.enable = true;
     };
   };
 }

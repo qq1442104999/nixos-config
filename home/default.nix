@@ -9,7 +9,7 @@
     ../modules/home/omzsh/default.nix
 
     # NixVim（Neovim Nix 配置）
-    ../modules/home/nixvim/default.nix
+    # ../modules/home/nixvim/default.nix
 
     # Noctalia Shell 配置
     ../modules/home/noctalia-shell/default.nix

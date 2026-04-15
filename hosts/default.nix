@@ -17,5 +17,7 @@
     ../modules/nixos/desktop/gtk-qt.nix
     ../modules/nixos/desktop/fcitx5.nix
     ../modules/nixos/desktop/stylix.nix
+
+    ../modules/home/nixvim/default.nix
   ];
 }

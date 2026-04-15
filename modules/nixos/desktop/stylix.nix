@@ -52,12 +52,12 @@
       #  enable = false;
       #};
 
-      nixvim = {
-        enable = true;
-        plugin = "base16-nvim";
-      };
+      #nixvim = {
+      #  enable = true;
+      #  #plugin = "base16-nvim";
+      #};
 
-      #nixvim.enable = false;
+      nixvim.enable = false;
 
       #kde.enable = false;
 

@@ -32,6 +32,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
+      "terminal" = [ "ghostty.desktop" ];
     };
   };
 

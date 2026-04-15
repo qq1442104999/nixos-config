@@ -18,6 +18,10 @@
     #../modules/home/stylix/default.nix
   ];
 
+  home.sessionVariables = {
+    TERMINAL = "ghostty";
+  };
+
   home.packages = with pkgs; [
     kitty       # 终端
     fastfetch   # 系统信息工具

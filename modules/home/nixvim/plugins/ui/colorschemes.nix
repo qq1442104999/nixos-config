@@ -22,5 +22,5 @@
     # pkgs.vimPlugins.base16-nvim
   # ];
 
-  # colorschemes.base16.enable = true;
+  colorschemes.base16.enable = true;
 }

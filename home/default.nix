@@ -16,14 +16,7 @@
     
     # stylix 配置
     #../modules/home/stylix/default.nix
-
-    inputs.stylix.homeModules.stylix
   ];
-
-  stylix = {
-    enable = true;
-    #base16Scheme = "...";
-  };
 
   home.packages = with pkgs; [
     kitty       # 终端

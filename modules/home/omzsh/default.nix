@@ -2,7 +2,7 @@
 
 let
   # 引入第三方插件源
-  sources = import ./_sources/generated.nix {
+  sources = import ../../_sources/generated.nix {
     inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools;
   };
 

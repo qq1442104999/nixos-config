@@ -14,6 +14,7 @@
     ../modules/home/programs/television.nix
     ../modules/home/programs/ghostty.nix
     ../modules/home/programs/tmux.nix
+    ../modules/home/programs/vscode.nix
   ];
 
   home.packages = with pkgs; [

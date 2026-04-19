@@ -31,18 +31,6 @@
 
   # xdg.menus.enable = true;
 
-  xdg.mime.enable = true;
-
-  # 定义文件类型与程序的关联
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "terminal" = [ "ghostty.desktop" ];
-      "x-scheme-handler/terminal" = [ "ghostty.desktop" ];
-      "application/x-terminal-emulator" = [ "kitty.desktop" ];
-    };
-  };
-
   # ==================================================
   # Git
   # ==================================================

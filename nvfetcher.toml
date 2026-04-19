@@ -15,5 +15,5 @@ src.git = "https://github.com/zsh-users/zsh-syntax-highlighting"
 fetch.github = "zsh-users/zsh-syntax-highlighting"
 
 [vscode-kdl]
-src.git = "kdl-org/vscode-kdl"
+src.git = "https://github.com/kdl-org/vscode-kdl"
 fetch.github = "kdl-org/vscode-kdl"

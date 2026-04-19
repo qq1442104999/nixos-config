@@ -16,6 +16,13 @@
     config.common.default = "gtk";
   };
 
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [ "ghostty.desktop" ];
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     noctalia-shell
     

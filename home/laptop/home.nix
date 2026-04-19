@@ -31,13 +31,6 @@
 
   # xdg.menus.enable = true;
 
-  xdg.terminal-exec = {
-    enable = true;
-    settings = {
-      default = [ "ghostty.desktop" ];
-    };
-  };
-  
   xdg.mime.enable = true;
 
   # 定义文件类型与程序的关联

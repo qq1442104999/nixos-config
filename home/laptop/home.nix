@@ -45,6 +45,7 @@
     enable = true;
     defaultApplications = {
       "terminal" = [ "ghostty.desktop" ];
+      "x-scheme-handler/terminal" = [ "ghostty.desktop" ];
     };
   };
 

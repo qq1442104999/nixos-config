@@ -23,10 +23,8 @@
     };
   };
 
-  xdg.mime.enable = true;
-
   # 定义文件类型与程序的关联
-  xdg.mimeApps = {
+  xdg.mime = {
     enable = true;
     defaultApplications = {
       "terminal" = [ "ghostty.desktop" ];

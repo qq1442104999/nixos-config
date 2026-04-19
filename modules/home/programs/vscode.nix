@@ -20,7 +20,7 @@
         #"editor.fontSize" = 14;
         "editor.lineHeight" = 22;
         "editor.tabSize" = 2;
-        "editor.renderWhitespace" = "all";
+        # "editor.renderWhitespace" = "all";
         "editor.minimap.enabled" = false;
         "files.trimTrailingWhitespace" = true;
         "files.insertFinalNewline" = true;

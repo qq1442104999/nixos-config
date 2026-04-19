@@ -32,7 +32,7 @@
     # 对应 export FZF_CTRL_T_COMMAND 和 FZF_CTRL_T_OPTS
     fileWidgetCommand = "fd --hidden --follow --exclude .git";
     fileWidgetOptions = [
-      "--preview '${../scripts/preview.sh} {}'"
+      "--preview '${../omzsh/scripts/preview.sh} {}'"
     ];
 
     # 对应 export FZF_ALT_C_COMMAND

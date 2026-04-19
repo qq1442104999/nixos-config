@@ -14,5 +14,5 @@ in
       builtins.readFile "${tmuxConf}/.tmux.conf";
   };
 
-  xdg.configFile."tmux/.tmux.conf.local".source = ../scripts/.tmux.conf.local;
+  xdg.configFile."tmux/.tmux.conf.local".source = ../omzsh/scripts/.tmux.conf.local;
 }

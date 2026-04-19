@@ -46,6 +46,7 @@
     defaultApplications = {
       "terminal" = [ "ghostty.desktop" ];
       "x-scheme-handler/terminal" = [ "ghostty.desktop" ];
+      "application/x-terminal-emulator" = [ "kitty.desktop" ];
     };
   };
 

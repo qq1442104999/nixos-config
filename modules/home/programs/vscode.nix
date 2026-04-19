@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  sources = import ../../_sources/generated.nix { inherit pkgs; };
+  sources = import ../../../_sources/generated.nix { inherit pkgs; };
 in
 {
   programs.vscode = {

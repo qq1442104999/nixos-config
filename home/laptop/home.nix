@@ -26,6 +26,12 @@
     documents = "${config.home.homeDirectory}/Documents";
     desktop = null; # 禁用桌面文件夹（如果你不喜欢桌面上放东西）
   };
+
+  xdg.icons.enable = true;
+
+  xdg.menus.enable = true;
+
+  xdg.terminal-exec.enable = true;
   
   xdg.mime.enable = true;
   # 定义文件类型与程序的关联

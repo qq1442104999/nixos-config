@@ -5,7 +5,7 @@
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        ms-ceintl.vscode-language-pack-zh-hans
+        #ms-ceintl.vscode-language-pack-zh-hans
         jnoortheen.nix-ide
         catppuccin.catppuccin-vsc
         pkief.material-icon-theme

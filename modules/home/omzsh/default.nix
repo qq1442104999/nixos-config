@@ -10,17 +10,6 @@ let
 
 in
 {
-  # imports = [
-  #   ./programs/starship.nix
-  #   ./programs/eza.nix
-  #   #./programs/fzf.nix
-  #   ./programs/zoxide.nix
-  #   ./programs/yazi.nix
-  #   ./programs/television.nix
-  #   ./programs/ghostty.nix
-  #   ./programs/tmux.nix
-  # ];
-
   # ======================
   # Zsh / Oh-My-Zsh
   # ======================

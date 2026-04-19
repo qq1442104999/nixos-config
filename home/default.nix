@@ -6,14 +6,14 @@
     ../modules/home/omzsh/default.nix
     ../modules/home/noctalia-shell/default.nix
 
-    ../modules/programs/starship.nix
-    ../modules/programs/eza.nix
-    ../modules/programs/fzf.nix
-    ../modules/programs/zoxide.nix
-    ../modules/programs/yazi.nix
-    ../modules/programs/television.nix
-    ../modules/programs/ghostty.nix
-    ../modules/programs/tmux.nix
+    ../modules/home/programs/starship.nix
+    ../modules/home/programs/eza.nix
+    ../modules/home/programs/fzf.nix
+    ../modules/home/programs/zoxide.nix
+    ../modules/home/programs/yazi.nix
+    ../modules/home/programs/television.nix
+    ../modules/home/programs/ghostty.nix
+    ../modules/home/programs/tmux.nix
   ];
 
   home.packages = with pkgs; [

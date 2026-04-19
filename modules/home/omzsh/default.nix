@@ -10,16 +10,16 @@ let
 
 in
 {
-  imports = [
-    ./programs/starship.nix
-    ./programs/eza.nix
-    #./programs/fzf.nix
-    ./programs/zoxide.nix
-    ./programs/yazi.nix
-    ./programs/television.nix
-    ./programs/ghostty.nix
-    ./programs/tmux.nix
-  ];
+  # imports = [
+  #   ./programs/starship.nix
+  #   ./programs/eza.nix
+  #   #./programs/fzf.nix
+  #   ./programs/zoxide.nix
+  #   ./programs/yazi.nix
+  #   ./programs/television.nix
+  #   ./programs/ghostty.nix
+  #   ./programs/tmux.nix
+  # ];
 
   # ======================
   # Zsh / Oh-My-Zsh
@@ -76,17 +76,6 @@ in
       }
     ];
 
-    # ----------------------
-    # initExtra 拆块
-    # ----------------------
-    #initContent = lib.mkOrder 1000 (
-    #  builtins.readFile (
-    #    pkgs.replaceVars ./scripts/my_initContent.zsh{
-    #      ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh"; # Nix 会自动把这个路径替换成 /nix/store/...
-    #    }
-    #  )
-    #);
-
     initContent = lib.mkMerge [
       (lib.mkOrder 500 ''
         #zmodload zsh/zprof
@@ -114,7 +103,6 @@ in
   # ======================
   home.packages = with pkgs; [
     lesspipe
-    fzf
     file        # CLI 文件浏览器
     fd          # CLI 文件搜索工具
     ripgrep     # CLI rg搜索工具
@@ -141,13 +129,4 @@ in
   home.sessionVariables = {
     LESSOPEN  = "|${./scripts/lessfilter} %s";
   };
-
-  # ======================
-  # 使用外部 lessfilter 文件
-  # ======================
-  #home.file.".config/lessfilter".source = ./scripts/lessfilter;
-
-  #home.file.".config/fzf/preview.sh".source = ./scripts/preview.sh;
-
-  #xdg.configFile."dircolors".source = ./scripts/LS_COLORS;
 }

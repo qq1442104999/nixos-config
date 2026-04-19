@@ -4,6 +4,7 @@
     TERM = "xterm-256color";
     COLORTERM = "truecolor";
     CLIPBOARD = "wl-copy";
+    TERMINAL = "ghostty";
   };
 
   # 系统层面的 Zsh 配置

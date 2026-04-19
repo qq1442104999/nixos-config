@@ -49,7 +49,6 @@
 
     targets = {
       nixvim.enable = false;
-      vscode.enable = false;
     };
   };
 }

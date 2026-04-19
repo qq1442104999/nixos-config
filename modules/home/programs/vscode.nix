@@ -15,6 +15,7 @@
         "locale" = "zh-cn";
         "workbench.colorTheme" = "Catppuccin Dark";
         # "workbench.iconTheme" = "Material Icon Theme";
+        "workbench.iconTheme": "material-icon-theme"
         "editor.fontFamily" = "'Fira Code', 'Source Code Pro', Consolas, 'Courier New', monospace";
         "editor.fontLigatures" = true;
         "editor.fontSize" = 14;

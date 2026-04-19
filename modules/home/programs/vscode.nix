@@ -1,14 +1,21 @@
 { pkgs, ... }:
+let
+  sources = import ./_sources/generated.nix { inherit pkgs; };
+in
 {
   programs.vscode = {
     enable = true;
 
     profiles.default = {
-      extensions = with pkgs.vscode-extensions; [
-        ms-ceintl.vscode-language-pack-zh-hans
-        jnoortheen.nix-ide
-        catppuccin.catppuccin-vsc
-        pkief.material-icon-theme
+      extensions = 
+        (with pkgs.vscode-extensions; [
+          ms-ceintl.vscode-language-pack-zh-hans
+          jnoortheen.nix-ide
+          catppuccin.catppuccin-vsc
+          pkief.material-icon-theme
+      ])
+      ++ [
+        sources.vscode-kdl
       ];
 
       userSettings = {

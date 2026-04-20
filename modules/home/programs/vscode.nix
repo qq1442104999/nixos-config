@@ -4,12 +4,13 @@
     enable = true;
 
     profiles.default = {
-      extensions = 
+      extensions =
         (with pkgs.vscode-extensions; [
           ms-ceintl.vscode-language-pack-zh-hans
           jnoortheen.nix-ide
           catppuccin.catppuccin-vsc
           pkief.material-icon-theme
+          intellsmi.comment-translate
       ]);
 
       userSettings = {
@@ -27,6 +28,7 @@
         "files.trimTrailingWhitespace" = true;
         "files.insertFinalNewline" = true;
         "files.autoSave" = "onFocusChange";
+        "git.confirmSync" = false;
       };
     };
   };

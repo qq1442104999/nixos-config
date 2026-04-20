@@ -27,6 +27,7 @@
         "files.insertFinalNewline" = true;
         "files.autoSave" = "onFocusChange";
         "git.confirmSync" = false;
+        "git.enableSmartCommit" = true;
       };
     };
   };

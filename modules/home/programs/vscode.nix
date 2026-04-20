@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  sources = import ../../../_sources/generated.nix { inherit pkgs; };
-in
 {
   programs.vscode = {
     enable = true;
@@ -13,10 +10,7 @@ in
           jnoortheen.nix-ide
           catppuccin.catppuccin-vsc
           pkief.material-icon-theme
-      ])
-      ++ [
-        sources.vscode-kdl
-      ];
+      ]);
 
       userSettings = {
         "locale" = "zh-cn";

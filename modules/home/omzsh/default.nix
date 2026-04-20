@@ -2,12 +2,11 @@
 
 let
   # 引入第三方插件源
-  sources = import ./_sources/generated.nix {
+  sources = import ../../../_sources/generated.nix {
     inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools;
   };
 
   ZSH_CACHE_DIR = "${config.home.homeDirectory}/.cache/oh-my-zsh"; # 缓存目录
-
 in
 {
   # ======================

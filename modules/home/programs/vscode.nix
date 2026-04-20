@@ -16,14 +16,12 @@
       userSettings = {
         "locale" = "zh-cn";
         "workbench.colorTheme" = "Catppuccin Dark";
-        # "workbench.iconTheme" = "Material Icon Theme";
         "workbench.iconTheme" = "material-icon-theme";
         "editor.fontFamily" = "'Fira Code', 'Source Code Pro', Consolas, 'Courier New', monospace";
         "editor.fontLigatures" = true;
         "editor.fontSize" = 14;
         "editor.lineHeight" = 22;
         "editor.tabSize" = 2;
-        # "editor.renderWhitespace" = "all";
         "editor.minimap.enabled" = false;
         "files.trimTrailingWhitespace" = true;
         "files.insertFinalNewline" = true;

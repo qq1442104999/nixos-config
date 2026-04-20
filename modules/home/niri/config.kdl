@@ -111,7 +111,7 @@ output "eDP-1" {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 12
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -159,7 +159,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 3
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -168,7 +168,7 @@ layout {
 
         // Color of the ring on the active monitor.
         // active-color "#7fc8ff"
-        active-color "#cba6f7"
+        active-color "#f2cdcd"
 
         // Color of the ring on inactive monitors.
         //
@@ -308,7 +308,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    slowdown 3.0
+    slowdown 2.0
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -355,22 +355,12 @@ window-rule {
 
 window-rule {
     match is-active=false
-    opacity 0.80
+    opacity 0.90
 }
 
 debug {
   // Allows notification actions and window activation from Noctalia.
     honor-xdg-activation-with-invalid-serial
-}
-
-/-environment {
-  QT_QPA_PLATFORM "wayland"
-  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-
-  GTK_IM_MODULE "fcitx"
-  QT_IM_MODULE "fcitx"
-  XMODIFIERS "@im=fcitx"
-  INPUT_METHOD "fcitx"
 }
 
 binds {

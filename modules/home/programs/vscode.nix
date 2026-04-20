@@ -11,6 +11,7 @@
           catppuccin.catppuccin-vsc
           pkief.material-icon-theme
           intellsmi.comment-translate
+          tamasfe.even-better-toml
       ]);
 
       userSettings = {

@@ -4,6 +4,7 @@
 
   services.flatpak = {
     enable = true;
+
     # 自动添加仓库
     remotes = lib.mkOptionDefault [
       {
@@ -11,10 +12,12 @@
         location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
       }
     ];
+
     # 声明式安装应用
     packages = [
-      "flathub:com.github.tchx84.Flatseal"
+      "com.github.tchx84.Flatseal"
     ];
+    
     # 自动更新
     update.auto = {
       enable = true;

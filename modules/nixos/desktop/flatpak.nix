@@ -14,7 +14,6 @@
     # 声明式安装应用
     packages = [
       "flathub:com.github.tchx84.Flatseal"
-      "flathub:org.mozilla.firefox"
     ];
     # 自动更新
     update.auto = {

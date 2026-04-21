@@ -25,15 +25,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = { 
+    stylix = {
       url =  "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-flatpak = {
-      url = "github:gvolpe/nix-flatpak";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nix-flatpak = {
+      # url = "github:gvolpe/nix-flatpak";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    # };
+  };
 
   # 2️⃣ 输出
   outputs = inputs@{ flake-parts, nixpkgs, ... }:
@@ -41,7 +42,7 @@
       systems = [ "x86_64-linux" ];
       flake = {
         nixosConfigurations = {
-          
+
           wang = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };

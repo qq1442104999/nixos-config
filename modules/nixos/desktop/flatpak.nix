@@ -1,4 +1,4 @@
-{ inputs, ... }: 
+{ config, pkgs, lib, inputs, ... }: 
 {
   imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
 

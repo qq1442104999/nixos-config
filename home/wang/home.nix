@@ -15,7 +15,7 @@
   home.homeDirectory = "/home/wang";
 
   # Home Manager 状态版本（非常重要，不要随便改）
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   # ======XDG 用户目录配置=============
   xdg.enable = true;

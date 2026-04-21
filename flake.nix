@@ -29,7 +29,11 @@
       url =  "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
+
+    nix-flatpak = {
+      url = "github:gvolpe/nix-flatpak";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   # 2️⃣ 输出
   outputs = inputs@{ flake-parts, nixpkgs, ... }:

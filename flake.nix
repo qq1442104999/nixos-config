@@ -20,27 +20,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixvim
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # noctalia-shell
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      #inputs.noctalia-qs.follows = "noctalia-qs";
-    };
-
-    #noctalia-qs = {
-    #  url = "github:noctalia-dev/noctalia-qs";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
-    # niri
-    niri = {
-      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

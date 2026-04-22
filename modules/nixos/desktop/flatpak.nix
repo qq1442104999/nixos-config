@@ -16,6 +16,7 @@
     # 声明式安装应用
     packages = [
       "com.github.tchx84.Flatseal"
+      "com.valvesoftware.Steam"
     ];
     
     # 自动更新

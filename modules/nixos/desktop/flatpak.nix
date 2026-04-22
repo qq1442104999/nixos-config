@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }: 
+{ config, pkgs, lib, inputs, ... }:
 {
   imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
 
@@ -16,9 +16,8 @@
     # 声明式安装应用
     packages = [
       "com.github.tchx84.Flatseal"
-      "com.valvesoftware.Steam"
     ];
-    
+
     # 自动更新
     update.auto = {
       enable = true;

@@ -15,8 +15,11 @@
 
     kvantum = {
       enable = true;
-      themes = with pkgs; [
-        catppuccin-kvantum
+      themes = [
+        (pkgs.catppuccin-kvantum.override {
+          variant = "mocha";
+          accent = "lavender";
+        })
       ];
     };
   };

@@ -9,9 +9,9 @@
   };
 
   qt = {
-   enable = true;
-   platformTheme.name = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
-  #  style = "kvantum";
+    enable = true;
+    platformTheme.name = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
+    style.name = "adwaita-dark";
   };
 
   gtk = {

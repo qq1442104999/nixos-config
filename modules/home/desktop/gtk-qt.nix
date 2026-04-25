@@ -27,15 +27,20 @@
 
   gtk = {
     enable = true;
+
     iconTheme = {
       package = pkgs.papirus-icon-theme;
       name = "Papirus-Dark";
     };
 
-    # font = {
-      # name = "Source Han Sans SC";
-      # size = 14; # 这里设置全局 GTK 字号
-    #};
+    theme = {
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ]; # 选择你喜欢的点缀色
+        size = "standard";
+        variant = "mocha";
+      };
+      name = "catppuccin-mocha-lavender-standard";
+    };
   };
 
   #environment.variables = {

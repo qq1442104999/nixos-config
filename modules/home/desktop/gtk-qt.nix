@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   # 1. 安装必要的包
   home.packages = with pkgs [

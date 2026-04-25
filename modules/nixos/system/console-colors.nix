@@ -2,7 +2,8 @@
 { pkgs, ... }:
 {
   console = {
-    enabled = true;
+    enable = true;
+    earlySetup = true;
     colors = [
       "1e1e2e" # 0: Black (Base)
       "f38ba8" # 1: Red (Red)

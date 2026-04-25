@@ -12,6 +12,7 @@
     ../modules/nixos/system/audio.nix
     ../modules/nixos/system/network.nix
     ../modules/nixos/system/packages.nix
+    ../modules/nixos/system/console-colors.nix
 
     ../modules/nixos/desktop/niri.nix
     ../modules/nixos/desktop/gtk-qt.nix

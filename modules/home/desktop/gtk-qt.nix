@@ -11,6 +11,14 @@
     nwg-look
   ];
 
+  home.pointerCursor = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   qt = {
    enable = true;
   #  platformTheme = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
@@ -19,6 +27,11 @@
 
   gtk = {
     enable = true;
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+
     # font = {
       # name = "Source Han Sans SC";
       # size = 14; # 这里设置全局 GTK 字号

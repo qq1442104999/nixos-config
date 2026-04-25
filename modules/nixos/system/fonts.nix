@@ -12,5 +12,6 @@
     monospace = [ "JetBrainsMono Nerd Font" "Source Han Sans SC" ];
     sansSerif = [ "Source Han Sans SC" ];
     serif     = [ "Source Han Sans SC" ];
+    emoji     = [ "Noto Color Emoji" ];
   };
 }

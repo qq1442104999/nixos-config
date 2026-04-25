@@ -8,14 +8,23 @@
     
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
+
+    nwg-look
   ];
 
-  # 2. 使用 NixOS 官方 Qt 配置模块（它会自动帮你设好环境变量）
-  #qt = {
-  #  enable = true;
-  #  platformTheme = "qt5ct"; # 这会自动处理 qt5ct 和 qt6ct 的映射
+  qt = {
+   enable = true;
+  #  platformTheme = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
   #  style = "kvantum";
-  #};
+  };
+
+  gtk = {
+    enable = true;
+    # font = {
+      # name = "Source Han Sans SC";
+      # size = 14; # 这里设置全局 GTK 字号
+    };
+  };
 
   environment.variables = {
     QT_QPA_PLATFORM = "wayland";

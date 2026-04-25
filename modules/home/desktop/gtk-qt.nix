@@ -12,6 +12,10 @@
     enable = true;
     platformTheme.name = "qtct";
     style.name = "kvantum";
+
+    kvantum.themes = with pkgs; [
+      catppuccin-kvantum
+    ];
   };
 
   gtk = {
@@ -33,6 +37,5 @@
   };
 
   home.packages = with pkgs; [ 
-    catppuccin-kvantum 
   ];
 }

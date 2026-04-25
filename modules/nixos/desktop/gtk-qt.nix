@@ -9,15 +9,12 @@
     kdePackages.qtstyleplugin-kvantum
 
     nwg-look
-
-    kdePackages.qqc2-desktop-style 
-    libsForQt5.qtstyleplugins
   ];
 
   environment.variables = {
     QT_QPA_PLATFORM = "wayland;xcb";
     # QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_QPA_PLATFORMTHEME = "qtct";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
 
   #  QT_QPA_PLATFORM = "wayland";
   #  QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";

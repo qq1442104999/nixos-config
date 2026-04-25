@@ -10,8 +10,8 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
-    style.name = "adwaita-dark";
+    platformTheme.name = "qtct";
+    style.name = "kvantum";
   };
 
   gtk = {
@@ -31,4 +31,8 @@
       name = "catppuccin-mocha-lavender-standard";
     };
   };
+
+  home.packages = with pkgs; [ 
+    catppuccin-kvantum 
+  ];
 }

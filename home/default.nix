@@ -5,6 +5,7 @@
     ../modules/home/niri/default.nix
     ../modules/home/omzsh/default.nix
     ../modules/home/noctalia-shell/default.nix
+    ../modules/home/gtk-qt/default.nix
     # ../modules/home/stylix/default.nix
 
     ../modules/home/programs/starship.nix

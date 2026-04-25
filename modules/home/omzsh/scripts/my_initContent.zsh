@@ -31,6 +31,7 @@ setopt prompt_subst
 # ========= FZF-tab自定义预览 =========      
 # 启用 LS_COLORS
 #eval "$(dircolors ${./scripts/dircolors/dircolors.256dark})"
+export LS_COLORS="$(vivid generate catppuccin-mocha)"
 
 # zsh 原生补全颜色
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}

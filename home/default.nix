@@ -24,6 +24,7 @@
     pciutils    # lspci 工具
     tofi        # 应用启动器
     nvfetcher   # 插件管理工具
+    vivid       # 终端配色方案生成工具
 
     vlc         # 视频播放器
     imagemagick # 图像处理工具

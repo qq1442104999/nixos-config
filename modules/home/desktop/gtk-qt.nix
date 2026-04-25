@@ -21,7 +21,7 @@
 
   qt = {
    enable = true;
-   platformTheme = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
+   platformTheme.name = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
   #  style = "kvantum";
   };
 
@@ -41,6 +41,11 @@
       };
       name = "catppuccin-mocha-lavender-standard";
     };
+  };
+
+  home.sessionVariables = {
+    QT_QPA_PLATFORM = "wayland;xcb";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
   };
 
   #environment.variables = {

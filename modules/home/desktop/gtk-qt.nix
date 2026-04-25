@@ -21,7 +21,7 @@
 
   qt = {
    enable = true;
-  #  platformTheme = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
+   platformTheme = "gtk"; # 这会自动处理 qt5ct 和 qt6ct 的映射
   #  style = "kvantum";
   };
 

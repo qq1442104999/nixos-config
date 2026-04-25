@@ -2,11 +2,11 @@
 {
   # 1. 安装必要的包
   environment.systemPackages = with pkgs; [
-    libsForQt5.qt5ct
-    kdePackages.qt6ct
+    #libsForQt5.qt5ct
+    #kdePackages.qt6ct
     
-    libsForQt5.qtstyleplugin-kvantum
-    kdePackages.qtstyleplugin-kvantum
+    #libsForQt5.qtstyleplugin-kvantum
+    #kdePackages.qtstyleplugin-kvantum
 
     nwg-look
   ];

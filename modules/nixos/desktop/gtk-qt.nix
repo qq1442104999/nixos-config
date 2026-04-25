@@ -9,11 +9,18 @@
     kdePackages.qtstyleplugin-kvantum
 
     nwg-look
+
+    libsForQt5.qtstyleplugins
+    kdePackages.qt6gtk2
+    qgnomeplatform 
+    qgnomeplatform-qt6
   ];
 
   environment.variables = {
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_QPA_PLATFORMTHEME = "gtk3";
+
   #  QT_QPA_PLATFORM = "wayland";
   #  QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
   #  QT_X11_NO_MITSHM = "1";

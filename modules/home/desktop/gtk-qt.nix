@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   # 1. 安装必要的包
-  home.packages = with pkgs [
+  home.packages = with pkgs; [
     libsForQt5.qt5ct
     kdePackages.qt6ct
     

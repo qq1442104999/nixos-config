@@ -2,7 +2,7 @@
 
 {
   # 1. 安装必要的包
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs [
     libsForQt5.qt5ct
     kdePackages.qt6ct
     
@@ -23,13 +23,13 @@
     # font = {
       # name = "Source Han Sans SC";
       # size = 14; # 这里设置全局 GTK 字号
-    };
+    #};
   };
 
-  environment.variables = {
-    QT_QPA_PLATFORM = "wayland";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_X11_NO_MITSHM = "1";
-    NIXOS_OZONE_WL = "1";
-  };
+  #environment.variables = {
+  #  QT_QPA_PLATFORM = "wayland";
+  #  QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+  #  QT_X11_NO_MITSHM = "1";
+  #  NIXOS_OZONE_WL = "1";
+  #};
 }

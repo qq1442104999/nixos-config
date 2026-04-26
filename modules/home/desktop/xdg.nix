@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   xdg.enable = true;

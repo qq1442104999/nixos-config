@@ -2,8 +2,6 @@
 
 {
   imports = [
-    inputs.disko.nixosModules.disko
-    ./disk-config.nix
     ./hardware-configuration.nix
 
     inputs.home-manager.nixosModules.home-manager

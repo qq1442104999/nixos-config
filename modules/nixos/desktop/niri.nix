@@ -16,22 +16,6 @@
     config.common.default = "gtk";
   };
 
-  xdg.terminal-exec = {
-    enable = true;
-    settings = {
-      default = [ "ghostty.desktop" ];
-    };
-  };
-
-  # 定义文件类型与程序的关联
-  xdg.mime = {
-    enable = true;
-    defaultApplications = {
-      "terminal" = [ "ghostty.desktop" ];
-    };
-  };
-
-
   environment.systemPackages = with pkgs; [
     noctalia-shell
     

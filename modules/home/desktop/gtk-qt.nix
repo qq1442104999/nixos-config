@@ -34,6 +34,11 @@
       name = "Papirus-Dark";
     };
 
+    font = {
+      name = "Source Han Sans SC"; 
+      size = 15; 
+    };
+
     theme = {
       package = pkgs.catppuccin-gtk.override {
         accents = [ "lavender" ]; # 选择你喜欢的点缀色

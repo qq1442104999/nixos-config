@@ -35,6 +35,7 @@
     };
 
     font = {
+      package = pkgs.source-han-sans;
       name = "Source Han Sans SC"; 
       size = 15; 
     };

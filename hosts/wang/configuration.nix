@@ -2,9 +2,11 @@
 
 {
   imports = [
+    inputs.disko.nixosModules.disko
+    ./disk-config.nix
     ./hardware-configuration.nix
 
-    inputs.home-manager.nixosModules.home-manager  # <-- 系统级 Home Manager 模块
+    inputs.home-manager.nixosModules.home-manager
     {
       home-manager = {
         useGlobalPkgs = true;

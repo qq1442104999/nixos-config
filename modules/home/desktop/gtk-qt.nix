@@ -21,6 +21,7 @@
           accent = "lavender";
         })
       ];
+      settings.General.theme = "catppuccin-mocha-lavender";
     };
   };
 

@@ -1,4 +1,5 @@
 { pkgs, ... }:
+
 {
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
@@ -41,12 +42,6 @@
       };
       name = "catppuccin-mocha-lavender-standard";
     };
-  };
-
-  home.sessionVariables = {
-    QT_QPA_PLATFORM = "wayland;xcb";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
   home.packages = with pkgs; [ 

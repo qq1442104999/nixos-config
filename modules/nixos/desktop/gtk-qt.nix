@@ -1,16 +1,6 @@
 { pkgs, ... }:
+
 {
-  # 1. 安装必要的包
-  environment.systemPackages = with pkgs; [
-    #libsForQt5.qt5ct
-    #kdePackages.qt6ct
-    
-    #libsForQt5.qtstyleplugin-kvantum
-    #kdePackages.qtstyleplugin-kvantum
-
-    nwg-look
-  ];
-
   environment.variables = {
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";

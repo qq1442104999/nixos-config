@@ -358,14 +358,14 @@ window-rule {
     opacity 0.8
 }
 
-window-rule {
+/-window-rule {
     background-effect {
         xray true
         blur true
         noise 0.05
         saturation 3
     }
-}
+//}
 
 debug {
   // Allows notification actions and window activation from Noctalia.

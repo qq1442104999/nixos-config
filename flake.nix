@@ -34,6 +34,9 @@
       url = "github:gmodena/nix-flatpak";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # niri.url = "github:YaLTeR/niri";
+    # niri.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   # 2️⃣ 输出

@@ -1,6 +1,6 @@
 { modulesPath, ... }:
 {
-  imports = [ 
+  imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
@@ -12,7 +12,15 @@
     "rtsx_pci_sdmmc"
   ];
 
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [
+    "kvm-intel"
+    "ip_tables"
+    "iptable_filter"
+    "iptable_nat"
+    "iptable_mangle"
+    "bridge"
+    "tun"
+  ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
 

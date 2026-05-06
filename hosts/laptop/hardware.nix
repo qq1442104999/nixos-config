@@ -14,12 +14,6 @@
 
   boot.kernelModules = [
     "kvm-intel"
-    "ip_tables"
-    "iptable_filter"
-    "iptable_nat"
-    "iptable_mangle"
-    "bridge"
-    "tun"
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";

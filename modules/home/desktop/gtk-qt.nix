@@ -12,18 +12,20 @@
   qt = {
     enable = true;
     platformTheme.name = "qtct";
-    style.name = "kvantum";
 
-    kvantum = {
-      enable = true;
-      themes = [
-        (pkgs.catppuccin-kvantum.override {
-          variant = "mocha";
-          accent = "lavender";
-        })
-      ];
-      settings.General.theme = "catppuccin-mocha-lavender";
-    };
+    style.name = "breeze";
+    # style.name = "kvantum";
+
+    # kvantum = {
+      # enable = true;
+      # themes = [
+        # (pkgs.catppuccin-kvantum.override {
+          # variant = "mocha";
+          # accent = "lavender";
+        # })
+      # ];
+      # settings.General.theme = "catppuccin-mocha-lavender";
+    # };
   };
 
   gtk = {
@@ -35,21 +37,24 @@
     };
 
     font = {
-      name = "Source Han Sans Regular"; 
-      size = 15; 
+      name = "Source Han Sans Regular";
+      size = 15;
     };
 
     theme = {
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "lavender" ]; # 选择你喜欢的点缀色
-        size = "standard";
-        variant = "mocha";
-      };
-      name = "catppuccin-mocha-lavender-standard";
+      # package = pkgs.catppuccin-gtk.override {
+        # accents = [ "lavender" ]; # 选择你喜欢的点缀色
+        # size = "standard";
+        # variant = "mocha";
+      # };
+      # name = "catppuccin-mocha-lavender-standard";
+
+      package = pkgs.kdePackages.breeze-gtk;
+      name = "Breeze";
     };
   };
 
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
     nwg-look
   ];
 }

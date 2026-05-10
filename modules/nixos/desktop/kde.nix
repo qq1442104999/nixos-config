@@ -5,8 +5,8 @@
   # 2. 开启桌面环境 KDE Plasma
   services.desktopManager.plasma6.enable = true;
 
-  # 3. 配置显示管理器（登录窗）
-  # 如果你之前用的是别的（比如 greetd），可以换成 SDDM（KDE 官方推荐）
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true; # 让 SDDM 支持 Wayland 启动
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 }
